@@ -1,2 +1,0 @@
-var db = require("../models");
-

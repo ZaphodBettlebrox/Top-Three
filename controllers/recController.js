@@ -1,6 +1,7 @@
 var db = require("../models");
 
-
+const express= require('express');
+const router = express.Router();
 // 
 
 // get all existing top 3 routes.
@@ -35,3 +36,5 @@ module.exports = function(app) {
     
 
 };
+
+module.exports = router
