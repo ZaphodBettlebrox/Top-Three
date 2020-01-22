@@ -1,0 +1,20 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "This will be our read me",
+  "main": "\\",
+  "scripts": {
+    "test": "\\",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZaphodBettlebrox/Project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZaphodBettlebrox/Project-2/issues"
+  },
+  "homepage": "https://github.com/ZaphodBettlebrox/Project-2#readme"
+}
