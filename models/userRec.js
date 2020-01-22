@@ -23,6 +23,14 @@
         }
       });
     };
+    UserRec.associate = function(models) {
+        // to reference the list foreign key
+        UserRec.belongsTo(models.Product, {
+          foreignKey: {
+            allowNull: false
+          }
+        });
+      };
   
     return UserRec;
   };
