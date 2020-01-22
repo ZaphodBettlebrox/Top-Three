@@ -12,7 +12,7 @@ module.exports = function(app) {
       // 1. Add a join to include all of each Author's Posts
       db.List.findAll({}).then(function(dbList) {
         res.json(dbList);
-        res.render(test.html);
+        res.render(entry.html);
       });
     });
 
@@ -32,7 +32,5 @@ module.exports = function(app) {
     //         res.json(dbList);
     //     });
     // });
-
-    
 
 };
