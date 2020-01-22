@@ -8,12 +8,32 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+
+const categoryRoutes = require("./controllers/categoryController");
+app.use("/category", categoryRoutes);
+
+
+const htmlRoutes = require("./controllers/htmlController");
+app.use("/start", htmlRoutes);
+
+
+const profileRoutes = require("./controllers/profileController");
+app.use("/profile", profileRoutes);
+
+
+const recRoutes = require("./controllers/recController");
+app.use("/rec", recRoutes);
+
+
 
 db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+    console.log("App listening on PORT http://localhost:" + PORT);
 
 })
 })
