@@ -1,4 +1,5 @@
 {
+
   "name": "Project-2",
   "version": "1.0.0",
   "description": "This will be our read me",
@@ -11,12 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/ZaphodBettlebrox/Project-2.git"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ZaphodBettlebrox/Project-2/issues"
   },
+
   "homepage": "https://github.com/ZaphodBettlebrox/Project-2#readme",
   "dependencies": {
     "express": "^4.17.1",
