@@ -6,11 +6,6 @@ module.exports = function(sequelize, DataTypes) {
         validate: {
           len: [1]
         }
-      },
-      body: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        len: [1]
       }
     });
   
@@ -23,6 +18,16 @@ module.exports = function(sequelize, DataTypes) {
         }
       });
     };
+
+    // ASSOCIATE List with user rec table? 
+    List.associate = function(models){
+      List.hasMany(models.UserRec, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    };
+
   
     return List;
   };
