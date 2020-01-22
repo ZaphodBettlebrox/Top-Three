@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
 
     Product.associate = function(models) {
         // to reference the list foreign key
-        UserRec.belongsTo(models.UserRec, {
+        Product.belongsTo(models.UserRec, {
           foreignKey: {
             allowNull: false
           }
