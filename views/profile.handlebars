@@ -1,0 +1,16 @@
+<h1>Profile Page</h1>
+
+<ul>
+    {{#each User}}
+    <li>
+        <p>
+            {{this.id}}
+        </p>
+        <p>{{this.firstname}}</p>
+        <p>{{this.lastname}}</p>
+        <p>{{this.bio}}</p>
+    </li>
+    <button>DELETE</button>
+    <button>UPDATE</button>
+    {{/each}}
+</ul>
