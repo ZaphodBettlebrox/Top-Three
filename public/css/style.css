@@ -23,3 +23,7 @@ body{
     background: linear-gradient(90deg, rgba(211,27,194,1) 0%, rgba(174,0,213,1) 22%, rgba(71,22,235,1) 65%, rgba(65,1,170,1) 100%);
 
 }
+
+.responsive-img {
+    width: 100vw;
+}
