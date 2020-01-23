@@ -1,5 +1,6 @@
 
 
+
 $(document).ready(function () {
     // $('select').formSelect();
     $("#category-select").on("change",event=>{
@@ -17,3 +18,14 @@ $(document).ready(function () {
     })
 
 });
+
+  console.log("works");
+
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+      
+
