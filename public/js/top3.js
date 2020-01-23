@@ -4,9 +4,16 @@ $(function() {
         event.preventDefault()
       var id = $(this).attr("id");
         console.log(id);
-    
     });
 
     });
   
     
+  // console.log("works");
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+      
