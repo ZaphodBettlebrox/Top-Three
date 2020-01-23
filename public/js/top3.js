@@ -1,10 +1,6 @@
+console.log("works");
 
-  console.log("works");
+$(document).ready(function(){
+$('.carousel').carousel();
 
-
-  // Or with jQuery
-
-  $(document).ready(function(){
-    $('.carousel').carousel();
-  });
-      
+});
