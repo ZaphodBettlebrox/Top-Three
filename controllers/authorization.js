@@ -64,7 +64,7 @@ router.post('/login',function(req,res){
         }
         res.json(req.session);
 
-        // req.session.user.id has the user ID if we want to grab the information for that particular user.
+        // req.session.user.id has the user ID if we want to grab the information for that particular user. 
     })
 })
 
