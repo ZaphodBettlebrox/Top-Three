@@ -30,3 +30,7 @@ body{
 .transparent{
     background: rgb(0, 0, 0);
 }
+
+.responsive-img {
+    width: 100vw;
+}
