@@ -3,6 +3,8 @@ var express = require("express");
 var app = express();
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
+var session = require("express-session");
+require('dotenv').config();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -12,6 +14,8 @@ var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+app.use(session({ secret: process.env.SESSION_SECRET, resave: true, saveUninitialized: true,cookie:{maxAge: 7200000} }));
+
 
 
 const categoryRoutes = require("./controllers/categoryController");
@@ -29,6 +33,8 @@ app.use("/profile", profileRoutes);
 const recRoutes = require("./controllers/recController");
 app.use("/rec", recRoutes);
 
+const signupRoute = require("./controllers/authorization")
+app.use("/signup", signupRoute); 
 
 
 
