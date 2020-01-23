@@ -17,6 +17,8 @@ app.set("view engine", "handlebars");
 app.use(session({ secret: process.env.SESSION_SECRET, resave: true, saveUninitialized: true,cookie:{maxAge: 7200000} }));
 
 
+const authRoute = require("./controllers/authorization")
+app.use("/signup", authRoute); 
 
 const categoryRoutes = require("./controllers/categoryController");
 app.use("/category", categoryRoutes);
@@ -33,8 +35,6 @@ app.use("/profile", profileRoutes);
 const recRoutes = require("./controllers/recController");
 app.use("/rec", recRoutes);
 
-const signupRoute = require("./controllers/authorization")
-app.use("/signup", signupRoute); 
 
 
 

@@ -4,11 +4,11 @@ var db = require('../models');
 const bcrypt = require('bcrypt');
 
 //get route for entry page, if logged in will elt you in, otherwise will fail
-router.get('/entry',function(req,res){
+router.get('/',function(req,res){
     if(req.session.user) {
         res.render('entry',req.session.user);
     }else {
-        res.send('log in first jabroni!')
+        res.redirect("/signup/signup");
     }
 })
 //get route to retrieve all users info, only for dev, remove from production
