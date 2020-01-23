@@ -29,7 +29,7 @@ router.post('/signup',function(req,res){
     db.User.create({
         firstname: req.body.firstname,
         lastname: req.body.lastname,
-        username: req.body.name,
+        username: req.body.username,
         password: req.body.password,
         bio: req.body.bio
 
@@ -50,12 +50,12 @@ router.get('/login',function(req,res){
 router.post('/login',function(req,res){
     db.User.findOne({
         where:{
-            name:req.body.name
+            username:req.body.username
         }}).then(function(dbUser){
             //compares password send in req.body to one in database, will return true if matched.
         if(bcrypt.compareSync(req.body.password,dbUser.password)) {
             //create new session property "user", set equal to logged in user
-            req.session.user = {name:dbUser.name,id:dbUser.id};
+            req.session.user = {name:dbUser.username,id:dbUser.id};
         }
         else {
             //delete existing user, add error
@@ -63,6 +63,8 @@ router.post('/login',function(req,res){
             req.session.error = 'auth failed'
         }
         res.json(req.session);
+
+        // req.session.user.id has the user ID if we want to grab the information for that particular user.
     })
 })
 
