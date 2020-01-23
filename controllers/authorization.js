@@ -3,8 +3,8 @@ var router = express.Router();
 var db = require('../models');
 const bcrypt = require('bcrypt');
 
-//get route for secret clubhouse, if logged in will elt you in, otherwise will fail
-router.get('/secret',function(req,res){
+//get route for entry page, if logged in will elt you in, otherwise will fail
+router.get('/entry',function(req,res){
     if(req.session.user) {
         res.render('entry',req.session.user);
     }else {
@@ -60,7 +60,7 @@ router.post('/login',function(req,res){
         else {
             //delete existing user, add error
             req.session.user= false;
-            req.session.error = 'auth failed bro'
+            req.session.error = 'auth failed'
         }
         res.json(req.session);
     })
