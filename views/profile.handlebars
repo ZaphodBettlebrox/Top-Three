@@ -1,16 +1,50 @@
-<h1>Profile Page</h1>
+<div class="container-fluid">
+    <div class="row">
+        <nav>
+            <div class="nav-wrapper gradient-header">
+                <a href="#!" class="brand-logo">Top 3</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                <li><a href="login">login</a></li>
+                <li><a href="profile">Profile Page </a></li>
+                <li><a href="category">Category</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+    </div>
 
-<ul>
-    {{#each User}}
-    <li>
-        <p>
-            {{this.id}}
-        </p>
-        <p>{{this.firstname}}</p>
-        <p>{{this.lastname}}</p>
-        <p>{{this.bio}}</p>
-    </li>
-    <button>DELETE</button>
-    <button>UPDATE</button>
-    {{/each}}
-</ul>
+    <div class="row">
+      <img src="/images/blank_profile.png" alt="profile image" class="profile image">
+    </div>
+    {{!----------------- have all sarahs content here --}}
+    <h1>Profile Page</h1>
+
+    <ul>
+        {{#each User}}
+        <li>
+            <p>
+                {{this.id}}
+            </p>
+            <p>{{this.firstname}}</p>
+            <p>{{this.lastname}}</p>
+            <p>{{this.bio}}</p>
+        </li>
+        <button>DELETE</button>
+        <button>UPDATE</button>
+        {{/each}}
+    </ul>
+
+  {{!------------------------- ends here --}}
+    <div class="row fixed-row-bottom">
+        <div class="row footer">
+            <p class="copyright">Copyright 2020, all rights reserved</p>
+        </div>
+    </div>
+</div>
