@@ -4,36 +4,44 @@ const express= require('express');
 const router = express.Router();
 // 
 
-// get all existing top 3 routes.
-// render all existing top 3 informations through handlebars.
-// 
 
-module.exports = function(app) {
-    app.get("/api/category", function(req, res) {
-      // 1. Add a join to include all of each Author's Posts
-      db.List.findAll({}).then(function(dbList) {
-        res.json(dbList);
-        res.render(entry.html);
-      });
-    });
+//get render the create rec page
+router.get("/newRec", function(req, res) {
+  res.render("createRec")
+});
 
- // This is just the show page. Doesn't need to create or delete. 
-    // app.post("/api/category", function(req, res) {
-    // db.List.create(req.body).then(function(dbList) {
-    //     res.json(dbList);
-    //     });
-    // });
 
-    // app.delete("/api/category/:id", function(req, res) {
-    //     db.List.destroy({
-    //         where: {
-    //         id: req.params.id
-    //         }
-    //     }).then(function(dbList) {
-    //         res.json(dbList);
-    //     });
-    // });
 
-};
+//get request for products of that category
+router.get("/grablist/:category", function(req, res) {
+  db.Product.findAll({
+    where: {
+      category: req.params.category
+    }
+  }).then(data=>{
+    res.json(data);
+  })
+});
+
+//post request to insert new list
+
+
+
+
+
+
+router.get("/", function(req, res) {
+  db.List.findAll({}).then(function(dbList) {
+    res.json(dbList);
+  });
+});
+// 1 specific category, multiple user lists. THIS will need to be a join.
+router.get("/api/:id", function(req,res){
+  // time to join and include the proper top 3 search params.
+  db.List.findAll({}).then(function(dbList2){
+    res.json(dbList2);
+    res.render(dbList2);
+  })
+})
 
 module.exports = router

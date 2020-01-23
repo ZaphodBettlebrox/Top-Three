@@ -17,6 +17,7 @@ router.get("/", function (req, res) {
             //     burgerarray.push(data[index].dataValues)
             // }
             // console.log(burgerarray)
+          
             var hbsObject = {
                 User: data
             };
@@ -27,11 +28,37 @@ router.get("/", function (req, res) {
 
 
 //route to update profile info
-
+router.put("/:id", function (req, res) {
+    // console.log(req.body.id)
+    db.User.update(
+        {
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            bio: req.body.bio
+        },
+        {
+            where: {
+                id: req.body.id
+            }
+        })
+        .then(function (Userdb) {
+            console.log(Userdb)
+            res.json(Userdb);
+        });
+});
 
 
 
 //route to delete your account
+
+
+
+
+//route account to view user's recommendation
+
+
+
+//route account to view liked recs
 
 
 
