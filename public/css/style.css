@@ -34,3 +34,14 @@ body{
 .responsive-img {
     width: 100vw;
 }
+.profile_image{
+    margin-top: 5vh;
+    width: 20vw;
+    border-radius: 50%;
+}
+.tempbox{
+    height: 30vh;
+    width: 20vw;
+    background: chartreuse;
+    margin: 5vw;
+}
