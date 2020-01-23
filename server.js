@@ -19,7 +19,7 @@ app.use("/category", categoryRoutes);
 
 
 const htmlRoutes = require("./controllers/htmlController");
-app.use("/start", htmlRoutes);
+app.use("/", htmlRoutes);
 
 
 const profileRoutes = require("./controllers/profileController");
@@ -28,6 +28,8 @@ app.use("/profile", profileRoutes);
 
 const recRoutes = require("./controllers/recController");
 app.use("/rec", recRoutes);
+
+
 
 
 
