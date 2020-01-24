@@ -36,9 +36,6 @@ const recRoutes = require("./controllers/recController");
 app.use("/rec", recRoutes);
 
 
-
-
-
 db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT http://localhost:" + PORT);
