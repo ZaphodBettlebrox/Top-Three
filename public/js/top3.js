@@ -1,3 +1,11 @@
+$(document).ready(function(){
+$('.carousel').carousel();
+});
+
+$(document).ready(function(){
+    $('select').formSelect();
+});
+
 $(document).ready(function () {
     // when user selects a category from dropdown grab all the product data related to that specific category and render in the product dropdown
     $("#category-select").on("change", event => {
@@ -208,11 +216,3 @@ $(document).ready(function () {
 
 
 });
-
-
-
-// Or with jQuery
-
-//   $(document).ready(function(){
-//     $('.carousel').carousel();
-//   });

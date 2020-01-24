@@ -45,3 +45,20 @@ body{
     background: chartreuse;
     margin: 5vw;
 }
+.carousel-shrink{
+    width: 30vw;
+}
+.arrow{
+    position: relative;
+    top: 36vh;
+    width: 2vw;
+}
+.light_background{
+    background: rgba(121, 121, 121, 0.137);
+    width: 80vw;
+}
+.logobutton{
+    margin-left: 2vw;
+    margin-top: 1vh;
+    width: 2vw;
+}
