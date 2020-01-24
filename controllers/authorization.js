@@ -8,7 +8,7 @@ router.get('/',function(req,res){
     if(req.session.user) {
         res.render('entry',req.session.user);
     }else {
-        res.redirect("/signup/signup");
+        res.redirect("/login");
     }
 })
 //get route to retrieve all users info, only for dev, remove from production
