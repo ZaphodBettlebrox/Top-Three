@@ -1,39 +1,89 @@
 var db = require("../models");
 
-const express= require('express');
+const express = require('express');
 const router = express.Router();
 // 
 
-// get all existing top 3 routes.
-// render all existing top 3 informations through handlebars.
-// 
 
-module.exports = function(app) {
-    app.get("/api/category", function(req, res) {
-      // 1. Add a join to include all of each Author's Posts
-      db.List.findAll({}).then(function(dbList) {
-        res.json(dbList);
-        res.render(entry.html);
-      });
-    });
+//get render the create rec page
+router.get("/newRec", function (req, res) {
+  res.render("createRec")
+});
 
- // This is just the show page. Doesn't need to create or delete. 
-    // app.post("/api/category", function(req, res) {
-    // db.List.create(req.body).then(function(dbList) {
-    //     res.json(dbList);
-    //     });
-    // });
 
-    // app.delete("/api/category/:id", function(req, res) {
-    //     db.List.destroy({
-    //         where: {
-    //         id: req.params.id
-    //         }
-    //     }).then(function(dbList) {
-    //         res.json(dbList);
-    //     });
-    // });
 
-};
+//get request for products of that category
+router.get("/grablist/:category", function (req, res) {
+  db.Product.findAll({
+    where: {
+      category: req.params.category
+    }
+  }).then(data => {
+    res.json(data);
+  })
+});
+
+//post request to insert new list
+router.post("/", function (req, res) {
+  console.log(req.body)
+  db.List.create({
+    category: req.body.category,
+    //need to FIX THIS
+    UserId: 1
+  }).then(dbList => {
+    console.log(dbList.id,'listid')
+    db.UserRec.create({
+      ListId: dbList.id,
+      ProductId: req.body.recOne.ProductId,
+      body: req.body.recOne.body,
+      rec_img: req.body.recOne.rec_img
+    }).then(dbRec => {
+      console.log(dbList.id,'listid')
+      db.UserRec.create({
+        ListId: dbList.id,
+        ProductId: req.body.recTwo.ProductId,
+        body: req.body.recTwo.body,
+        rec_img: req.body.recTwo.rec_img
+      }).then(dbRec => {
+        console.log(dbList.id,'listid')
+        db.UserRec.create({
+          ListId: dbList.id,
+          ProductId: req.body.recThree.ProductId,
+          body: req.body.recThree.body,
+          rec_img: req.body.recThree.rec_img
+        }).then(data=>{
+          res.json(data)
+        })
+      })
+    })
+  })
+})
+
+
+//create post for creating new product
+router.post("/newProd", function (req, res) {
+  console.log(req.body)
+    db.Product.create({
+      p_name: req.body.p_name,
+      category: req.body.category,
+    }).then(data=>{
+      res.json(data)
+    })
+})
+
+
+router.get("/", function (req, res) {
+  db.List.findAll({}).then(function (dbList) {
+    res.json(dbList);
+  });
+});
+// 1 specific category, multiple user lists. THIS will need to be a join.
+router.get("/api/:id", function (req, res) {
+  // time to join and include the proper top 3 search params.
+  db.List.findAll({}).then(function (dbList2) {
+    res.json(dbList2);
+    res.render(dbList2);
+  })
+})
 
 module.exports = router
