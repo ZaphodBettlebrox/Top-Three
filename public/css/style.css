@@ -62,3 +62,12 @@ body{
     margin-top: 1vh;
     width: 2vw;
 }
+.bottom-margin{
+width: 20vw;   
+height: 10vh;
+}
+
+.text-profile{
+    color: white;
+    background: rgba(209, 209, 209, 0.301);
+}
