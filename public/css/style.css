@@ -57,3 +57,8 @@ body{
     background: rgba(121, 121, 121, 0.137);
     width: 80vw;
 }
+.logobutton{
+    margin-left: 2vw;
+    margin-top: 1vh;
+    width: 2vw;
+}
