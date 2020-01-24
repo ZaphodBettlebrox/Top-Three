@@ -11,6 +11,14 @@ router.get("/newRec", function (req, res) {
 });
 
 
+//get userRec data with this route
+router.get("/", function (req, res){
+  db.UserRec.findAll({raw:true}).then(data => {
+    res.json(data);
+  })
+})
+
+
 
 //get request for products of that category
 router.get("/grablist/:category", function (req, res) {
@@ -29,7 +37,7 @@ router.post("/", function (req, res) {
   db.List.create({
     category: req.body.category,
     //need to FIX THIS
-    UserId: 1
+    UserId: req.session.user.id
   }).then(dbList => {
     console.log(dbList.id,'listid')
     db.UserRec.create({
@@ -72,8 +80,12 @@ router.post("/newProd", function (req, res) {
 })
 
 
+
+
 router.get("/", function (req, res) {
-  db.List.findAll({}).then(function (dbList) {
+  db.List.findAll({
+    // include:[db.User]
+  }).then(function (dbList) {
     res.json(dbList);
   });
 });
