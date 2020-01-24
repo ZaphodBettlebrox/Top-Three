@@ -28,7 +28,7 @@ router.post('/createNewUser',function(req,res){
 
     }).then(function(newUser){
         // console.log(newUser)
-        res.redirect("/entrypage");
+        res.redirect("/");
     }).catch(function(error){
         console.log(error);
     })
