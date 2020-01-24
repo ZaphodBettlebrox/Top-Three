@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var db = require('../models');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 //get route for entry page, if logged in will elt you in, otherwise will fail
 router.get('/',function(req,res){
