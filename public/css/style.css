@@ -31,9 +31,6 @@ body{
     background: rgb(0, 0, 0);
 }
 
-.responsive-img {
-    width: 100vw;
-}
 .profile_image{
     margin-top: 5vh;
     width: 20vw;
@@ -45,6 +42,30 @@ body{
     background: chartreuse;
     margin: 5vw;
 }
+<<<<<<< HEAD
+
+/* ENTRY PAGE */
+.catContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+.centered {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 10vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .category {
+    width: 100vw;
+}
+=======
 .carousel-shrink{
     width: 30vw;
 }
@@ -71,3 +92,4 @@ height: 10vh;
     color: white;
     background: rgba(209, 209, 209, 0.301);
 }
+>>>>>>> origin

@@ -39,7 +39,18 @@ $(document).ready(function () {
         })
     })
 
+    //entry page category id
+$(function() {
+    $(".category").on("click", function(event) {
+        event.preventDefault()
+      var id = $(this).attr("id");
+        console.log(id);
+    });
 
+<<<<<<< HEAD
+    });
+  
+=======
 
     $("#product-one").on("change", event => {
         //when user selects "create product" append an input element so user can create new product
@@ -148,6 +159,7 @@ $(document).ready(function () {
             )
             $("#newProduct1").hide()
             $("#btn1").hide()
+>>>>>>> origin
 
         })
     })
