@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var db = require('../models');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 //get route for entry page, if logged in will elt you in, otherwise will fail
 router.get('/',function(req,res){
@@ -62,9 +62,11 @@ router.post('/login',function(req,res){
             req.session.user= false;
             req.session.error = 'auth failed'
         }
-        res.json(req.session);
+        console.log(req.session);
+        res.redirect("/profile");
+        
 
-        // req.session.user.id has the user ID if we want to grab the information for that particular user.
+        // req.session.user.id has the user ID if we want to grab the information for that particular user. 
     })
 })
 
