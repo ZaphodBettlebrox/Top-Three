@@ -62,7 +62,9 @@ router.post('/login',function(req,res){
             req.session.user= false;
             req.session.error = 'auth failed'
         }
-        res.json(req.session);
+        console.log(req.session);
+        res.redirect("/profile");
+        
 
         // req.session.user.id has the user ID if we want to grab the information for that particular user. 
     })
