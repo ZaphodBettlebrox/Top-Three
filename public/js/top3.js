@@ -46,11 +46,7 @@ $(function() {
       var id = $(this).attr("id");
         console.log(id);
     });
-
-<<<<<<< HEAD
-    });
-  
-=======
+});
 
     $("#product-one").on("change", event => {
         //when user selects "create product" append an input element so user can create new product
@@ -159,7 +155,6 @@ $(function() {
             )
             $("#newProduct1").hide()
             $("#btn1").hide()
->>>>>>> origin
 
         })
     })
