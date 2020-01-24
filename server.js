@@ -20,9 +20,6 @@ app.use(session({ secret: process.env.SESSION_SECRET, resave: true, saveUninitia
 const authRoute = require("./controllers/authorization")
 app.use("/signup", authRoute); 
 
-const categoryRoutes = require("./controllers/categoryController");
-app.use("/category", categoryRoutes);
-
 
 const htmlRoutes = require("./controllers/htmlController");
 app.use("/", htmlRoutes);
