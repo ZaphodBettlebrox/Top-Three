@@ -3,14 +3,7 @@ var router = express.Router();
 var db = require('../models');
 const bcrypt = require('bcryptjs');
 
-//get route for entry page, if logged in will elt you in, otherwise will fail
-router.get('/',function(req,res){
-    if(req.session.user) {
-        res.render('entry',req.session.user);
-    }else {
-        res.redirect("/signup/signup");
-    }
-})
+
 //get route to retrieve all users info, only for dev, remove from production
 router.get('/allUsers',function(req,res){
     db.User.findAll().then(function(users){
@@ -18,13 +11,13 @@ router.get('/allUsers',function(req,res){
     })
 })
 
-//loads signup form
-router.get('/signup',function(req,res){
-    res.render('signup');
+//loads signup form url to load this page is http://localhost:8080/signup/createaccount
+router.get('/createAccount',function(req,res){
+    res.render('createAccount');
 })
 
-//creates new instance of user
-router.post('/signup',function(req,res){
+//creates new instance of user. Url is http://localhost:8080/signup/createaccount
+router.post('/createNewUser',function(req,res){
     console.log(req.body)
     db.User.create({
         firstname: req.body.firstname,
@@ -34,20 +27,16 @@ router.post('/signup',function(req,res){
         bio: req.body.bio
 
     }).then(function(newUser){
-        console.log(newUser)
-        res.json(newUser);
+        // console.log(newUser)
+        res.redirect("/entrypage");
     }).catch(function(error){
         console.log(error);
     })
 })
 
-//loads login form
-router.get('/login',function(req,res){
-    res.render('login')
-})
 
 //route for user login
-router.post('/login',function(req,res){
+router.post('/entrypage',function(req,res){
     db.User.findOne({
         where:{
             username:req.body.username
@@ -63,7 +52,7 @@ router.post('/login',function(req,res){
             req.session.error = 'auth failed'
         }
         console.log(req.session);
-        res.redirect("/profile");
+        res.redirect("/entrypage");
         
 
         // req.session.user.id has the user ID if we want to grab the information for that particular user. 

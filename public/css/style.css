@@ -42,6 +42,7 @@ body{
     background: chartreuse;
     margin: 5vw;
 }
+<<<<<<< HEAD
 
 /* ENTRY PAGE */
 .catContainer {
@@ -64,3 +65,31 @@ body{
   .category {
     width: 100vw;
 }
+=======
+.carousel-shrink{
+    width: 30vw;
+}
+.arrow{
+    position: relative;
+    top: 36vh;
+    width: 2vw;
+}
+.light_background{
+    background: rgba(121, 121, 121, 0.137);
+    width: 80vw;
+}
+.logobutton{
+    margin-left: 2vw;
+    margin-top: 1vh;
+    width: 2vw;
+}
+.bottom-margin{
+width: 20vw;   
+height: 10vh;
+}
+
+.text-profile{
+    color: white;
+    background: rgba(209, 209, 209, 0.301);
+}
+>>>>>>> origin

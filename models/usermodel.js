@@ -23,6 +23,11 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      profileurl: 
+      {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
       password: 
       {
         type: DataTypes.STRING,
