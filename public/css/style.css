@@ -50,6 +50,10 @@ body{
 }
 .arrow{
     position: relative;
-    top: 30vh;
+    top: 36vh;
     width: 2vw;
+}
+.light_background{
+    background: rgba(121, 121, 121, 0.137);
+    width: 80vw;
 }
