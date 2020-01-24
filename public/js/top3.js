@@ -28,6 +28,7 @@ $(document).ready(function () {
         })
     })
 
+    //entry page category id
 $(function() {
     $(".category").on("click", function(event) {
         event.preventDefault()

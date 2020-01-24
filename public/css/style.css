@@ -31,9 +31,6 @@ body{
     background: rgb(0, 0, 0);
 }
 
-.category {
-    width: 100vw;
-}
 .profile_image{
     margin-top: 5vh;
     width: 20vw;
@@ -63,3 +60,7 @@ body{
     font-size: 10vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  .category {
+    width: 100vw;
+}
