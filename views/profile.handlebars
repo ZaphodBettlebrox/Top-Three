@@ -6,29 +6,13 @@
                 <a href="#" class="brand-logo"><img class="logobutton" src="/images/hand.png" alt="logo"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="login">login</a></li>
+                    <li><a href="login">Sign out</a></li>
                     <li><a href="profile">Profile Page </a></li>
                     <li><a href="category">Category</a></li>
                 </ul>
             </div>
         </nav>
-
-<ul>
-    {{#each User}}
-    <li>
-        <p>
-            {{this.id}}
-        </p>
-        <p>{{this.firstname}}</p>
-        <p>{{this.lastname}}</p>
-        <p>{{this.bio}}</p>
-    </li>
-    <button>DELETE</button>
-    <button>UPDATE</button>
-    {{/each}}
-</ul>
-{{!-- CLOUDINARY  WIDGET --}}
-<button id="upload_widget" class="cloudinary-button">Upload files</button>
+    </div>
 
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
 
@@ -70,17 +54,25 @@ document.getElementById("upload_widget").addEventListener("click", function(){
             <li><a href="mobile.html">Mobile</a></li>
         </ul>
     </div>
-
-    <div class="row center-align">
-        <img src="/images/blank_profile.png" alt="profile image" class="profile_image">
+    <div class="row right-align">
+        <button id="upload_widget" class="cloudinary-button">Change Profile Picture</button>
     </div>
 
     <div class="row center-align">
-        <h5 class="profile-name">Placeholder name</h5>
-        <h3> THIS IS THE USER NAME : "{{singleUser.firstname}}" </h3>
-        <h3> THIS IS THE USER LASTNAME : "{{singleUser.lastname}}" </h3>
-        <h3> THIS IS THE USER ID : "{{singleUser.id}}" </h3>
-        <img src="{{singleUser.profileurl}}" alt="profile picture">
+        <img src="{{singleUser.profileurl}}" alt="profile picture" class="profile_image">
+    </div>
+ 
+    <div class="row center-align text-profile">
+        
+    {{#each User}}
+    
+        <h4>Logged in as: {{this.firstname}} {{this.lastname}}</h4>
+        <br>
+        <h4>Bio:</h4>
+        <h5>{{this.bio}}</h5>
+    
+    {{/each}}
+
     </div>
 
     <div class="row">
@@ -366,29 +358,12 @@ document.getElementById("upload_widget").addEventListener("click", function(){
                 <div class="col s3">
                 </div>
             </div>
+
+            <div class="bottom-margin">
+            </div>
+
         </div>
     </div>
-
-    {{!----------------- have all sarahs content here --}}
-    <h1>Profile Page</h1>
-
-    <ul>
-        {{#each User}}
-        <li>
-            <p>
-                {{this.id}}
-            </p>
-            <p>{{this.firstname}}</p>
-            <p>{{this.lastname}}</p>
-            <p>{{this.bio}}</p>
-            <img src="{{this.profileurl}}" alt="profile picture">
-        </li>
-        <button>DELETE</button>
-        <button>UPDATE</button>
-        {{/each}}
-    </ul>
-
-    {{!------------------------- ends here --}}
 
     <div class="row fixed-row-bottom">
         <div class="row footer">

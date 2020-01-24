@@ -19,7 +19,6 @@ router.get("/", function (req, res){
 })
 
 
-
 //get request for products of that category
 router.get("/grablist/:category", function (req, res) {
   db.Product.findAll({
