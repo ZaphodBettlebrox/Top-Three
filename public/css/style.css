@@ -42,7 +42,6 @@ body{
     background: chartreuse;
     margin: 5vw;
 }
-<<<<<<< HEAD
 
 /* ENTRY PAGE */
 .catContainer {
@@ -65,7 +64,6 @@ body{
   .category {
     width: 100vw;
 }
-=======
 .carousel-shrink{
     width: 30vw;
 }
@@ -92,4 +90,3 @@ height: 10vh;
     color: white;
     background: rgba(209, 209, 209, 0.301);
 }
->>>>>>> origin
