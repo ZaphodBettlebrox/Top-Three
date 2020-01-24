@@ -18,7 +18,7 @@ app.use(session({ secret: process.env.SESSION_SECRET, resave: true, saveUninitia
 
 
 const authRoute = require("./controllers/authorization")
-app.use("/signup", authRoute); 
+app.use("/login", authRoute); 
 
 
 const htmlRoutes = require("./controllers/htmlController");
@@ -36,6 +36,5 @@ app.use("/rec", recRoutes);
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT http://localhost:" + PORT);
-
 })
 })
