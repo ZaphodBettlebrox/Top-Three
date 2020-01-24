@@ -28,6 +28,7 @@ router.post("/", function (req, res) {
   console.log(req.body)
   db.List.create({
     category: req.body.category,
+    //need to FIX THIS
     UserId: 1
   }).then(dbList => {
     console.log(dbList.id,'listid')
@@ -59,9 +60,16 @@ router.post("/", function (req, res) {
 })
 
 
-
-
-
+//create post for creating new product
+router.post("/newProd", function (req, res) {
+  console.log(req.body)
+    db.Product.create({
+      p_name: req.body.p_name,
+      category: req.body.category,
+    }).then(data=>{
+      res.json(data)
+    })
+})
 
 
 router.get("/", function (req, res) {
