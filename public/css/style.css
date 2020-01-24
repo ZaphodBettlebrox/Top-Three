@@ -64,6 +64,19 @@ body{
   .category {
     width: 100vw;
 }
+
+/* REC PAGE */
+.bkgrnd {
+    position:relative;
+}
+
+.prof {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 2;
+}
+
 .carousel-shrink{
     width: 30vw;
 }

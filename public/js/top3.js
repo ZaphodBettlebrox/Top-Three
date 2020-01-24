@@ -40,17 +40,12 @@ $(document).ready(function () {
     })
 
     //entry page category id
-$(function() {
-    $(".category").on("click", function(event) {
-        event.preventDefault()
-      var id = $(this).attr("id");
-        console.log(id);
-    });
-
-<<<<<<< HEAD
-    });
-  
-=======
+    $(function() {
+        $(".category").on("click", function(event) {
+            event.preventDefault()
+          var id = $(this).attr("id");
+            console.log(id);
+        });
 
     $("#product-one").on("change", event => {
         //when user selects "create product" append an input element so user can create new product
@@ -87,7 +82,7 @@ $(function() {
 
         })
 
-    })
+    }),
 
 
 
@@ -125,7 +120,7 @@ $(function() {
             $("#btn1").hide()
 
         })
-    })
+    }),
 
     $("#product-three").on("change", event => {
         //when user selects "create product" append an input element so user can create new product
@@ -159,10 +154,9 @@ $(function() {
             )
             $("#newProduct1").hide()
             $("#btn1").hide()
->>>>>>> origin
 
         })
-    })
+    }),
 
 
 
@@ -223,8 +217,7 @@ $(function() {
                 location.reload();
             }
         )
-    });
-
-
+    })
+});
 
 });
