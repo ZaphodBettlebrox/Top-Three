@@ -30,6 +30,42 @@
 
 <br>
 
+{{!--CLOUDINARY  WIDGET --}}
+<button id="upload_widget" class="cloudinary-button" id="widgetOne">Upload files</button>
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
+<script type="text/javascript">  
+var recUrl;
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'top3project', 
+  uploadPreset: 'yb5bx9uo'}, (error, result) => { 
+    if (!error && result && result.event === "success") { 
+        console.log('Done! Here is the image info: ', result.info);
+        recUrl = result.info.url 
+//create an ajax call to send result.info.url to table of user as profileurl .
+      //  $.ajax("/newRec", {
+        //        type: "POST",
+          //      data: {
+            //        rec_img: result.info.url,
+              //  }
+           // }).then(
+             //   function () {
+               //     console.log("created url route for profile picture");
+                    // Reload the page to get picture.
+                   // location.reload();
+              //  });
+
+    }
+  }
+)
+document.getElementById("upload_widget").addEventListener("click", function(){
+    myWidget.open();
+  }, false);
+</script>
+{{!-- CLOUDINARY WIDGET --}}
+
+
+<br>
+
 <div>
     <label>Select second product: </label>
     <select name="" id="product-two">
@@ -41,6 +77,14 @@
         <input type="text" id="comment-two" placeholder="Product description">
     </div>
 </div>
+
+<br>
+
+
+
+
+
+
 
 <br>
 

@@ -1,10 +1,10 @@
-$(document).ready(function(){
-$('.carousel').carousel();
-});
+// $(document).ready(function(){
+// $('.carousel').carousel();
+// });
 
-$(document).ready(function(){
-    $('select').formSelect();
-});
+// $(document).ready(function(){
+//     $('select').formSelect();
+// });
 
 $(document).ready(function () {
     // when user selects a category from dropdown grab all the product data related to that specific category and render in the product dropdown
@@ -159,17 +159,22 @@ $(document).ready(function () {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
+        console.log(recUrl);
         let listid = $("#category-select").val().trim();
         let productOneId = $("#product-one").val().trim();
         let commentOne = document.getElementById("comment-one").value;
+        //let widgetOne = document.getElementById("widgetOne").url;
+        // shouldn't widgetOne reference the result URL returned?
         let productTwoId = $("#product-two").val().trim();
         let commentTwo = document.getElementById("comment-two").value;
         let productThreeId = $("#product-three").val().trim();
         let commentThree = document.getElementById("comment-three").value;
 
+
         console.log(listid);
         console.log(productOneId);
         console.log(commentOne);
+        console.log (widgetOne);
         console.log(productTwoId);
         console.log(commentTwo);
         console.log(productThreeId);
@@ -180,7 +185,7 @@ $(document).ready(function () {
             // ListId: $("#category-select").val().trim(),
             ProductId: $("#product-one").val().trim(),
             body: document.getElementById("comment-one").value,
-            rec_img: "http://via.placeholder.com/640x360"
+            rec_img: recUrl
         }
         let recTwo = {
             // ListId: $("#category-select").val().trim(),
