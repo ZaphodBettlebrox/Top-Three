@@ -6,6 +6,34 @@ $(document).ready(function(){
     $('select').formSelect();
 });
 
+$(document).ready(function() {
+    $("#upload_widget").on("click", function() {
+        var myWidget = cloudinary.createUploadWidget({
+            cloudName: 'top3project',
+            uploadPreset: 'yb5bx9uo'
+        }, (error, result) => {
+            if (!error && result && result.event === "success") {
+                console.log('Done! Here is the image info: ', result.info);
+                //create an ajax call to send result.info.url to table of user as profileurl .
+                $.ajax("/profile/setprofileurl", {
+                    type: "POST",
+                    data: {
+                        profileurl: result.info.url,
+                    }
+                }).then(
+                    function () {
+                        console.log("created url route for profile picture");
+                        // Reload the page to get picture.
+                        location.reload();
+                    });
+
+            }
+        });
+        myWidget.open();
+        console.log("hi");
+    });
+});
+
 $(document).ready(function () {
     // when user selects a category from dropdown grab all the product data related to that specific category and render in the product dropdown
     $("#category-select").on("change", event => {
