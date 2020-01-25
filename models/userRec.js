@@ -3,10 +3,7 @@
     var UserRec = sequelize.define("UserRec", {
       rec_img: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
+        allowNull: true
       },
       body: {
         type: DataTypes.TEXT,
