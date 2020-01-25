@@ -33,7 +33,7 @@ const recRoutes = require("./controllers/recController");
 app.use("/rec", recRoutes);
 
 const userRecRoutes = require("./controllers/userRecController");
-app.use("/rec", userRecRoutes);
+app.use("/userrec", userRecRoutes);
 
 
 db.sequelize.sync({ force: false }).then(function() {

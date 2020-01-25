@@ -87,6 +87,8 @@ router.get("/test", function (req, res) {
     res.json(dbList);
   });
 });
+
+
 // 1 specific category, multiple user lists. THIS will need to be a join.
 router.get("/api/:id", function (req, res) {
   // time to join and include the proper top 3 search params.

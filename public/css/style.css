@@ -90,3 +90,28 @@ height: 10vh;
     color: white;
     background: rgba(209, 209, 209, 0.301);
 }
+
+.userimgbox{
+    margin-top: 50px;
+    height: 30vh;
+    width: 42vh;
+}
+
+.image{
+    width:100%;
+    height:100%;
+    /* padding: 20px */
+}
+
+/* .carousel-item{
+    display: flex;
+    justify-content: space-evenly
+} */
+
+.userreccarousel{
+    height: 80vh !important;
+    margin-top:10vh;
+    border-radius: 30px;
+    background-color: rgba(49, 48, 48, 0.733) !important;
+
+}
