@@ -18,6 +18,5 @@ router.get("/entrypage", function(req, res){
 })
 
 
-
 module.exports = router
 

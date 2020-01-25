@@ -32,6 +32,9 @@ app.use("/profile", profileRoutes);
 const recRoutes = require("./controllers/recController");
 app.use("/rec", recRoutes);
 
+const userRecRoutes = require("./controllers/userRecController");
+app.use("/rec", userRecRoutes);
+
 
 db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {

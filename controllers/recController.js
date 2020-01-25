@@ -79,11 +79,10 @@ router.post("/newProd", function (req, res) {
 })
 
 
-
-
-router.get("/", function (req, res) {
+//grabs all the list and joins with user rec
+router.get("/test", function (req, res) {
   db.List.findAll({
-    // include:[db.User]
+    include:[db.UserRec]
   }).then(function (dbList) {
     res.json(dbList);
   });
