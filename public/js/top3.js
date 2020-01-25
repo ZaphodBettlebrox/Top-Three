@@ -48,11 +48,11 @@ function slideshow() {
     slideIndex++;
     if (slideIndex > x.length) { slideIndex = 1 }
     x[slideIndex - 1].style.display = "block";
-    setTimeout(slideshow, 2000); // Change image every 2 seconds
+    setTimeout(slideshow, 5000);
 };
 
 //entry page text change
-var text = ["Explore", "Search", "Seek", "Desire"];
+var text = ["Explore", "Search", "Seek"];
 var counter = 0;
 var elem = document.getElementById("changeText");
 var inst = setInterval(change, 9000);
