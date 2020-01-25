@@ -1,85 +1,47 @@
-$(document).ready(function () {
-    $('.carousel').carousel();
-});
-
 
 $(document).ready(function () {
-    $("#upload_widget").on("click", function () {
-        var myWidget = cloudinary.createUploadWidget({
-            cloudName: 'top3project',
-            uploadPreset: 'yb5bx9uo'
-        }, (error, result) => {
-            if (!error && result && result.event === "success") {
-                console.log('Done! Here is the image info: ', result.info);
-                //create an ajax call to send result.info.url to table of user as profileurl .
-                $.ajax("/profile/setprofileurl", {
-                    type: "POST",
-                    data: {
-                        profileurl: result.info.url,
-                    }
-                }).then(
-                    function () {
-                        console.log("created url route for profile picture");
-                        // Reload the page to get picture.
-                        location.reload();
-                    });
-            }
-        });
-        myWidget.open();
-        console.log("hi");
-    });
-});
-
-$(document).ready(function () {
+    $('select').formSelect();
     // when user selects a category from dropdown grab all the product data related to that specific category and render in the product dropdown
     $("#category-select").on("change", event => {
         const catToSearch = event.target.value;
         $.get(`/rec/grablist/${catToSearch}`).then(data => {
-            // console.log(data);
+            console.log(data);
             $('#product-one').empty();
-            $('#product-two').empty();
-            $('#product-three').empty();
             $("#product-one").append("<option>----------</option>")
             $("#product-one").append("<option id='create1'>Create Product</option>")
-            $("#product-two").append("<option>----------</option>")
-            $("#product-two").append("<option id='create2'>Create Product</option>")
-            $("#product-three").append("<option>----------</option>")
-            $("#product-three").append("<option id='create3'>Create Product</option>")
+
             data.forEach(product => {
                 const prodOption = $(`<option name=${product.p_name} value=${product.id}>${product.p_name}</option>`);
-                // console.log(prodOption);
+                console.log(product);
                 $("#product-one").append(prodOption);
             })
+
             data.forEach(product => {
                 const prodOption = $(`<option name=${product.p_name} value=${product.id}>${product.p_name}</option>`);
                 // console.log(prodOption);
                 $("#product-two").append(prodOption);
+               
             })
+
             data.forEach(product => {
                 const prodOption = $(`<option name=${product.p_name} value=${product.id}>${product.p_name}</option>`);
                 // console.log(prodOption);
                 $("#product-three").append(prodOption);
             })
+
+            $('select').formSelect();
         })
     })
 
-    //entry page category id
-$(function() {
-    $(".category").on("click", function(event) {
-        event.preventDefault()
-      var id = $(this).attr("id");
-        console.log(id);
-    });
-});
 
     $("#product-one").on("change", event => {
         //when user selects "create product" append an input element so user can create new product
         // document.getElementById("create1").value
         let test = event.target.value
         console.log(test)
-        if (test = "Create Product") {
+        if (test === "Create Product") {
             let inputEl = $(`<input type="text" id="newProduct1" placeholder="Enter Product"><button id="btn1">Add Product</button>`)
-            $("#createProductOne").prepend(inputEl)
+            $("#createProduct").prepend(inputEl)
         }
 
         $("#btn1").on("click", event => {
@@ -107,7 +69,7 @@ $(function() {
 
         })
 
-    }),
+    })
 
 
 
@@ -116,9 +78,9 @@ $(function() {
         // document.getElementById("create1").value
         let test = event.target.value
         console.log(test)
-        if (test = "Create Product") {
+        if (test === "Create Product") {
             let inputEl = $(`<input type="text" id="newProduct2" placeholder="Enter Product"><button id="btn2">Add Product</button>`)
-            $("#createProductTwo").prepend(inputEl)
+            $("#createProduct").prepend(inputEl)
         }
 
         $("#btn2").on("click", event => {
@@ -145,16 +107,16 @@ $(function() {
             $("#btn1").hide()
 
         })
-    }),
+    })
 
     $("#product-three").on("change", event => {
         //when user selects "create product" append an input element so user can create new product
         // document.getElementById("create1").value
         let test = event.target.value
         console.log(test)
-        if (test = "Create Product") {
+        if (test === "Create Product") {
             let inputEl = $(`<input type="text" id="newProduct3" placeholder="Enter Product"><button id="btn3">Add Product</button>`)
-            $("#createProductThree").prepend(inputEl)
+            $("#createProduct").prepend(inputEl)
         }
 
         $("#btn3").on("click", event => {
@@ -181,7 +143,7 @@ $(function() {
             $("#btn1").hide()
 
         })
-    }),
+    })
 
 
 
@@ -242,24 +204,8 @@ $(function() {
                 location.reload();
             }
         )
-    })
-});
+    });
 
 
-// entry page slide
-var slideIndex = 0;
-slideshow();
-
-function slideshow() {
-  var i;
-  var x = document.getElementsByClassName("favSlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}
-  x[slideIndex-1].style.display = "block";
-  setTimeout(slideshow, 2000); // Change image every 2 seconds
-};
 
 });
