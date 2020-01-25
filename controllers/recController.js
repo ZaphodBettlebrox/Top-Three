@@ -32,7 +32,7 @@ router.get("/grablist/:category", function (req, res) {
 
 //post request to insert new list
 router.post("/", function (req, res) {
-  console.log(req.body)
+  // console.log(req.body)
   db.List.create({
     category: req.body.category,
     //need to FIX THIS
