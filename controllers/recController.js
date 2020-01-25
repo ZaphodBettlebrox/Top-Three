@@ -4,7 +4,6 @@ const express = require('express');
 const router = express.Router();
 // 
 
-
 //get render the create rec page
 router.get("/newRec", function (req, res) {
   res.render("createRec")
