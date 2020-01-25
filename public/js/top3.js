@@ -24,6 +24,7 @@ $(document).ready(function () {
                 }).then(
                     function () {
                         console.log("created url route for profile picture");
+                        alert("Hitting top3.js code");
                         // Reload the page to get picture.
                         location.reload();
                     });

@@ -1,29 +1,37 @@
 <div class="container">
-
-    <div class="carousel carousel-slider center userreccarousel">
-        <div class="carousel-fixed-item center">
-            {{!-- <a class="btn waves-effect white grey-text darken-text-2">button</a> --}}
-        </div>
-        <div class="carousel-item white-text" href="#one!">
-
-            <div>
-                <div>User's alias and image here</div>
-                <h2>Product 1 name</h2>
-                <p class="white-text">product description</p>
-            </div>
-            <div class="responsive-img userimgbox">
-                <img class="image" src="https://cdn.stocksnap.io/img-thumbs/960w/M2XAYFTTEN.jpg" alt="">
-            </div>
-        </div>
-        <div class="carousel-item amber white-text" href="#two!">
-            <h2>Product 2 name</h2>
-            <img src="" alt="">
-            <p class="white-text">product description</p>
-        </div>
-        <div class="carousel-item green white-text" href="#three!">
-            <h2>Product 3 name</h2>
-            <img src="" alt="">
-            <p class="white-text">product description</p>
+    <div class="col s12">
+        <div id="userinfo">User's alias and image here
+            <img class="userimg "src="" alt="">
+            <p id="username"></p>
         </div>
     </div>
-</div>  
+    <div class="carousel carousel-slider center userreccarousel">
+        {{!-- <div class="carousel-fixed-item center"> --}}
+        {{!-- <a class="btn waves-effect white grey-text darken-text-2">button</a> --}}
+        {{!-- </div> --}}
+        <div class="carousel-item white-text" href="#one!">
+            <div id="userproductone">
+                <h2 id="productonetitle">Product 1 name</h2>
+                <p id="productonedes" class="white-text c">product description</p>
+            </div>
+            <div class="responsive-img userimgboxone">
+            </div>
+        </div>
+        <div class="carousel-item white-text" href="#two!">
+            <div id="userproducttwo">
+                <h2 id="producttwotitle">Product 1 name</h2>
+                <p id="producttwodesc" class="white-text ">product description</p>
+            </div>
+            <div class="responsive-img userimgboxtwo">
+            </div>
+        </div>
+        <div class="carousel-item white-text" href="#three!">
+            <div id="userproductthree">
+                <h2 id="productthreetitle">Product 1 name</h2>
+                <p id="productthreedesc" class="white-text">product description</p>
+            </div>
+            <div class="responsive-img userimgboxthree">
+            </div>
+        </div>
+    </div>
+</div>
