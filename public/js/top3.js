@@ -6,6 +6,34 @@ $(document).ready(function(){
     $('select').formSelect();
 });
 
+$(document).ready(function() {
+    $("#upload_widget").on("click", function() {
+        var myWidget = cloudinary.createUploadWidget({
+            cloudName: 'top3project',
+            uploadPreset: 'yb5bx9uo'
+        }, (error, result) => {
+            if (!error && result && result.event === "success") {
+                console.log('Done! Here is the image info: ', result.info);
+                //create an ajax call to send result.info.url to table of user as profileurl .
+                $.ajax("/profile/setprofileurl", {
+                    type: "POST",
+                    data: {
+                        profileurl: result.info.url,
+                    }
+                }).then(
+                    function () {
+                        console.log("created url route for profile picture");
+                        // Reload the page to get picture.
+                        location.reload();
+                    });
+
+            }
+        });
+        myWidget.open();
+        console.log("hi");
+    });
+});
+
 $(document).ready(function () {
     // when user selects a category from dropdown grab all the product data related to that specific category and render in the product dropdown
     $("#category-select").on("change", event => {
@@ -40,12 +68,13 @@ $(document).ready(function () {
     })
 
     //entry page category id
-    $(function() {
-        $(".category").on("click", function(event) {
-            event.preventDefault()
-          var id = $(this).attr("id");
-            console.log(id);
-        });
+$(function() {
+    $(".category").on("click", function(event) {
+        event.preventDefault()
+      var id = $(this).attr("id");
+        console.log(id);
+    });
+});
 
     $("#product-one").on("change", event => {
         //when user selects "create product" append an input element so user can create new product
@@ -220,4 +249,19 @@ $(document).ready(function () {
     })
 });
 
-});
+
+// entry page slide
+var slideIndex = 0;
+slideshow();
+
+function slideshow() {
+  var i;
+  var x = document.getElementsByClassName("favSlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(slideshow, 2000); // Change image every 2 seconds
+};

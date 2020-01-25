@@ -46,11 +46,11 @@ body{
 /* ENTRY PAGE */
 .catContainer {
     position: relative;
-    text-align: center;
-    color: white;
+    
   }
 
 .centered {
+    text-align: center;
     pointer-events: none;
     position: absolute;
     top: 50%;
@@ -63,6 +63,10 @@ body{
 
   .category {
     width: 100vw;
+}
+
+.fancy {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* REC PAGE */
