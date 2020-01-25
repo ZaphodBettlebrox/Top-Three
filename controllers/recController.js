@@ -32,6 +32,8 @@ router.get("/grablist/:category", function (req, res) {
 
 //post request to insert new list
 router.post("/", function (req, res) {
+  console.log("req/")
+  console.log(req)
   // console.log(req.body)
   db.List.create({
     category: req.body.category,
@@ -69,6 +71,7 @@ router.post("/", function (req, res) {
 
 //create post for creating new product
 router.post("/newProd", function (req, res) {
+  console.log("rec/newProd at recController.js");
   console.log(req.body)
     db.Product.create({
       p_name: req.body.p_name,
