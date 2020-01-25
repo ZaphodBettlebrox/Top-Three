@@ -173,21 +173,22 @@ $(document).ready(function () {
             // ListId: $("#category-select").val().trim(),
             ProductId: $("#product-one").val().trim(),
             body: document.getElementById("comment-one").value,
-            rec_img: "http://via.placeholder.com/640x360"
+            rec_img: recUrl
         }
         let recTwo = {
             // ListId: $("#category-select").val().trim(),
             ProductId: $("#product-two").val().trim(),
             body: document.getElementById("comment-two").value,
-            rec_img: "http://via.placeholder.com/640x360"
+            rec_img: recUrl1
         }
         let recThree = {
             // ListId: $("#category-select").val().trim(),
             ProductId: $("#product-three").val().trim(),
             body: document.getElementById("comment-three").value,
-            rec_img: "http://via.placeholder.com/640x360"
+            rec_img: recUrl2
         }
 
+        
         // Send the POST request.
         $.ajax("/rec", {
             type: "POST",
