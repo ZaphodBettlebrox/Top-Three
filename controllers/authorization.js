@@ -70,7 +70,7 @@ router.post('/entrypage', function (req, res) {
 router.get('/logout', function (req, res) {
     //delete session user, logging you out
     req.session.destroy(function () {
-        res.send('successfully logged out')
+        res.render("login")
     })
 })
 

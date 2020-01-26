@@ -39,7 +39,7 @@ app.use("/rec", recRoutes);
 const userRecRoutes = require("./controllers/userRecController");
 app.use("/userRec", userRecRoutes);
 
-
+// HELPER false saves data, true deletes from server
 db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT http://localhost:" + PORT);
