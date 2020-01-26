@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/ZaphodBettlebrox/Project-2/issues"
   },
-  "homepage": "https://github.com/ZaphodBettlebrox/Project-2#readme",
+  "homepage": "https://github.com/ZaphodBettlebrox/Project-2#readme",``
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.19.0",
