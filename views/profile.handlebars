@@ -6,9 +6,9 @@
                 <a href="#" class="brand-logo"><img class="logobutton" src="/images/hand.png" alt="logo"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="login">Sign out</a></li>
                     <li><a href="profile">Profile Page </a></li>
-                    <li><a href="category">Category</a></li>
+                    <li><a href="entrypage">Explore</a></li>
+                    <li><a href="login">Sign out</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,24 +33,13 @@
 </div>
 
 <div class="row center-align">
-    <img src="{{User.profileurl}}" alt="profile picture" class="profile_image">
+
+    <img src="{{singleUser.profileurl}}" alt="profile picture" class="profile_image">
+    <h4>Logged in as: {{singleUser.firstname}} {{singleUser.lastname}}</h4>
+    <h4>Bio:</h4>
+    <h5>{{singleUser.bio}}</h5>
 </div>
 
-<div class="row center-align text-profile">
-    <h4>Logged in as: {{User.firstname}} {{User.lastname}}</h4>
-    <h4>Bio:</h4>
-    <h5>{{User.bio}}</h5>
-{{!-- 
-    {{#each User}}
-
-    <h4>Logged in as: {{this.firstname}} {{this.lastname}}</h4>
-    <br>
-    <h4>Bio:</h4>
-    <h5>{{this.bio}}</h5>
-
-    {{/each}} --}}
-
-</div>
 
 <div class="row">
     <div class="col s2">

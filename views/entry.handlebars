@@ -1,3 +1,16 @@
+<div class="row">
+    <nav>
+        <div class="nav-wrapper gradient-header">
+            <a href="#" class="brand-logo"><img class="logobutton" src="/images/hand.png" alt="logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="profile">Profile Page </a></li>
+                <li><a href="entrypage">Explore</a></li>
+                <li><a href="login">Sign out</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
 <div id="highlights">
     <div class="catContainer">
         <img class="favSlides category"
@@ -13,59 +26,57 @@
         <h4 class="centered fancy" id="changeText">Recommendations</h4>
     </div>
 
-    <div class="row">
-        <div class="catContainer column">
-            <input type="image" id="videogames" class="responsive-img category submit"
-                src="https://res.cloudinary.com/tyson/image/upload/v1579841613/Catagories/vgblue_rhj8wo.png">
-            <h4 class="centered">Video Games</h4>
-        </div>
+    <div class="catContainer col s12 L6">
+        <input type="image" value="board&cardgames" class="responsive-img category" id="catImg"
+            src="https://res.cloudinary.com/tyson/image/upload/v1579817504/Catagories/boardgames_blue_ysgcka.png">
+        <h4 class="centered">Board and Card games</h4>
+    </div>
 
-        <div class="catContainer column">
-            <input type="image" id="beauty" class="responsive-img category submit"
+    <div class="catContainer col s12 L6">
+        <form action="/allUserRec" method="GET">
+            <input type="image" value="beauty" class="responsive-img category submit" id="catImg"
                 src="https://res.cloudinary.com/tyson/image/upload/v1579843246/Catagories/beauty_aq7jic.png">
             <h4 class="centered">Beauty Products</h4>
-        </div>
+        </form>
     </div>
 
-    <div class="row">
-        <div class="catContainer column">
-            <input type="image" id="snacks" class="responsive-img category submit"
+    <div class="catContainer col s12 L6">
+        <form action="/allUserRec" method="GET">
+            <input type="image" value="snacks" class="responsive-img category submit" id="catImg"
                 src="https://res.cloudinary.com/tyson/image/upload/v1579845458/Catagories/snacks_tvwtmb.png">
             <h4 class="centered">Snacks</h4>
-        </div>
-
-        <div class="catContainer column">
-            <input type="image" id="boardgames" class="responsive-img category submit"
-                src="https://res.cloudinary.com/tyson/image/upload/v1579817504/Catagories/boardgames_blue_ysgcka.png">
-            <h4 class="centered flow-text">Boardgames</h4>
-        </div>
+        </form>
     </div>
 
-    <div class="row">
-        <div class="catContainer column">
-            <input type="image" id="movies" class="responsive-img category submit"
+    <div class="catContainer col s12 L6">
+        <form action="/allUserRec" method="GET">
+            <input type="image" value="videogames" class="responsive-img category" id="catImg"
+                src="https://res.cloudinary.com/tyson/image/upload/v1579841613/Catagories/vgblue_rhj8wo.png">
+            <h4 class="centered">Video Games</h4>
+        </form>
+    </div>
+
+    <div class="catContainer col s12 L6">
+        <form action="/allUserRec" method="GET">
+            <input type="image" value="movies" class="responsive-img category submit" id="catImg"
                 src="https://res.cloudinary.com/tyson/image/upload/v1579848141/Catagories/movies_ebmdcx.png">
             <h4 class="centered">Movies</h4>
-        </div>
-
-        <div class="catContainer column">
-            <input type="image" id="restaurants" class="responsive-img category submit"
-                src="https://res.cloudinary.com/tyson/image/upload/v1579847285/Catagories/restaurant_xmngrr.png">
-            <h4 class="centered">Restaurants</h4>
-        </div>
+        </form>
     </div>
 
-    <div class="row">
-        <div class="catContainer column">
-            <input type="image" id="vacationspots" class="responsive-img category submit"
-                src="https://res.cloudinary.com/tyson/image/upload/v1579847768/Catagories/vacation_u8cfbz.png">
-            <h4 class="centered fit">Vacation Spots</h4>
-        </div>
+    <div class="catContainer col s12 L6">
+        <form action="/allUserRec" method="GET">
+            <input type="image" value="restaurants" class="responsive-img category submit" id="catImg"
+                src="https://res.cloudinary.com/tyson/image/upload/v1579847285/Catagories/restaurant_xmngrr.png">
+            <h4 class="centered">Restaurants</h4>
+        </form>
+    </div>
 
-        <div class="catContainer column">
-            <input type="image" id="vacationspots" class="responsive-img category submit"
-                src="https://res.cloudinary.com/tyson/image/upload/v1579968050/Catagories/Books_ybp5zb.png">
-            <h4 class="centered fit">Books</h4>
-        </div>
+    <div class="catContainer col s12 L6">
+        <form action="/allUserRec" method="GET">
+            <input type="image" value="vacation" class="responsive-img category submit" id="catImg"
+                src="https://res.cloudinary.com/tyson/image/upload/v1579847768/Catagories/vacation_u8cfbz.png">
+            <h4 class="centered">Vacation Spots</h4>
+        </form>
     </div>
 </div>

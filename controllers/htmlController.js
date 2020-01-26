@@ -17,6 +17,11 @@ router.get("/entrypage", function(req, res){
     res.render("entry")
 })
 
+//render viewUserRec html
+router.get("/allUserRec", function(req,res){
+    
+    res.render("allUserRec")
+})
 
 
 module.exports = router
