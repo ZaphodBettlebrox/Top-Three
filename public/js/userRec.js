@@ -41,6 +41,8 @@ $(document).ready(function () {
         let userImg
         let listId
 
+        
+
         console.log(event.target.value)
     })
 
