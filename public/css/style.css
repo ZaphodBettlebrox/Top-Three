@@ -5,35 +5,25 @@
   position: fixed;
   bottom: 0;
 }
-.footer {
-  background: linear-gradient(
-    90deg,
-    rgba(211, 27, 194, 1) 0%,
-    rgba(174, 0, 213, 1) 22%,
-    rgba(71, 22, 235, 1) 65%,
-    rgba(65, 1, 170, 1) 100%
-  );
-  width: 100vw;
-  height: 10vh;
-  margin: 0;
-  text-align: center;
+
+.footer{
+    background: rgb(29, 28, 28);
+    width: 100vw;
+    height: 10vh;
+    margin: 0;
+    text-align: center;
 }
 .copyright {
   color: white;
   padding: 2vh;
 }
-body {
-  background: linear-gradient(0deg, rgb(0, 204, 255) 0%, rgb(112, 0, 204) 100%);
-  height: 100vh;
+
+body{
+    background: linear-gradient(to right, rgb(52, 199, 240),rgb(116, 223, 139) , rgb(133, 5, 133));
+    height: 100vh;
 }
-.gradient-header {
-  background: linear-gradient(
-    90deg,
-    rgba(211, 27, 194, 1) 0%,
-    rgba(174, 0, 213, 1) 22%,
-    rgba(71, 22, 235, 1) 65%,
-    rgba(65, 1, 170, 1) 100%
-  );
+.gradient-header{
+    background: rgb(29, 28, 28)
 }
 .signin {
   margin: 15vw;
@@ -131,6 +121,30 @@ body {
   margin-bottom: 11vh;
 }
 
+.userimgbox{
+    margin-top: 50px;
+    height: 30vh;
+    width: 42vh;
+}
+
+.image{
+    width:100%;
+    height:100%;
+    /* padding: 20px */
+}
+
+/* .carousel-item{
+    display: flex;
+    justify-content: space-evenly
+} */
+
+.userreccarousel{
+    height: 80vh !important;
+    margin-top:10vh;
+    border-radius: 30px;
+    background-color: rgba(49, 48, 48, 0.733) !important;
+
+}
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -234,6 +248,7 @@ body {
         bottom: -187px;
         left: -72px;
     }
+
     100% {
         bottom: -180px;
         left: -70px;

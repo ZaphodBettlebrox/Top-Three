@@ -6,9 +6,9 @@
                 <a href="#" class="brand-logo"><img class="logobutton" src="/images/hand.png" alt="logo"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="login">Sign out</a></li>
                     <li><a href="profile">Profile Page </a></li>
-                    <li><a href="category">Category</a></li>
+                    <li><a href="entrypage">Explore</a></li>
+                    <li><a href="login">Sign out</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,21 +33,13 @@
 </div>
 
 <div class="row center-align">
+
     <img src="{{singleUser.profileurl}}" alt="profile picture" class="profile_image">
-</div>
-
-<div class="row center-align text-profile">
-
-    {{#each User}}
-
-    <h4>Logged in as: {{this.firstname}} {{this.lastname}}</h4>
-    <br>
+    <h4>Logged in as: {{singleUser.firstname}} {{singleUser.lastname}}</h4>
     <h4>Bio:</h4>
-    <h5>{{this.bio}}</h5>
-
-    {{/each}}
-
+    <h5>{{singleUser.bio}}</h5>
 </div>
+
 
 <div class="row">
     <div class="col s2">
@@ -58,10 +50,16 @@
         <div class="carousel carousel-slider center">
             <div class="carousel-fixed-item center">
             </div>
-            <div class="carousel-item  white-text" href="#one!">
-                <h2>Your Recommendations</h2>
-                <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-            </div>
+
+            {{#each Recos}}
+                <div class="carousel-item  white-text" href="#one!">
+                    <h2>cat: {{this.category}}</h2>
+                    <h2>body: {{this.body}}</h2>
+                    <a href="#"><img src="{{this.rec_img}}"></a>
+                </div>
+            {{/each}}
+{{!-- 
+
             <div class="carousel-item  white-text" href="#two!">
                 <h2>Your Recommendations</h2>
                 <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
@@ -73,7 +71,9 @@
             <div class="carousel-item  white-text" href="#four!">
                 <h2>Your Recommendations</h2>
                 <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-            </div>
+            </div> --}}
+
+
         </div>
     </div>
 

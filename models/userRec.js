@@ -19,8 +19,13 @@
           allowNull: false
         }
       });
-    };
-    UserRec.associate = function(models) {
+
+      // to reference the list foreign key
+      UserRec.belongsTo(models.User, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
         // to reference the list foreign key
         UserRec.belongsTo(models.Product, {
           foreignKey: {

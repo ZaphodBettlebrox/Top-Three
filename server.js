@@ -6,13 +6,17 @@ var db = require("./models");
 var session = require("express-session");
 require('dotenv').config();
 
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
 var exphbs = require("express-handlebars");
+var foo = {
+  json: function(context) {return JSON.stringify(context)}
+}
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ defaultLayout: "main", helpers:foo }));
 app.set("view engine", "handlebars");
 app.use(session({ secret: process.env.SESSION_SECRET, resave: true, saveUninitialized: true,cookie:{maxAge: 7200000} }));
 
@@ -38,3 +42,5 @@ db.sequelize.sync({ force: false }).then(function() {
     console.log("App listening on PORT http://localhost:" + PORT);
 })
 })
+
+
