@@ -44,21 +44,24 @@ router.post("/", function (req, res) {
       ListId: dbList.id,
       ProductId: req.body.recOne.ProductId,
       body: req.body.recOne.body,
-      rec_img: req.body.recOne.rec_img
+      rec_img: req.body.recOne.rec_img,
+      UserId: req.session.user.id
     }).then(dbRec => {
       console.log(dbList.id,'listid')
       db.UserRec.create({
         ListId: dbList.id,
         ProductId: req.body.recTwo.ProductId,
         body: req.body.recTwo.body,
-        rec_img: req.body.recTwo.rec_img
+        rec_img: req.body.recTwo.rec_img,
+        UserId: req.session.user.id
       }).then(dbRec => {
         console.log(dbList.id,'listid')
         db.UserRec.create({
           ListId: dbList.id,
           ProductId: req.body.recThree.ProductId,
           body: req.body.recThree.body,
-          rec_img: req.body.recThree.rec_img
+          rec_img: req.body.recThree.rec_img,
+          UserId: req.session.user.id
         }).then(data=>{
           res.json(data)
         })

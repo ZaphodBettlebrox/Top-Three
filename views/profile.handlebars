@@ -33,11 +33,14 @@
 </div>
 
 <div class="row center-align">
-    <img src="{{singleUser.profileurl}}" alt="profile picture" class="profile_image">
+    <img src="{{User.profileurl}}" alt="profile picture" class="profile_image">
 </div>
 
 <div class="row center-align text-profile">
-
+    <h4>Logged in as: {{User.firstname}} {{User.lastname}}</h4>
+    <h4>Bio:</h4>
+    <h5>{{User.bio}}</h5>
+{{!-- 
     {{#each User}}
 
     <h4>Logged in as: {{this.firstname}} {{this.lastname}}</h4>
@@ -45,7 +48,7 @@
     <h4>Bio:</h4>
     <h5>{{this.bio}}</h5>
 
-    {{/each}}
+    {{/each}} --}}
 
 </div>
 
@@ -58,10 +61,16 @@
         <div class="carousel carousel-slider center">
             <div class="carousel-fixed-item center">
             </div>
-            <div class="carousel-item  white-text" href="#one!">
-                <h2>Your Recommendations</h2>
-                <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-            </div>
+
+            {{#each Recos}}
+                <div class="carousel-item  white-text" href="#one!">
+                    <h2>cat: {{this.category}}</h2>
+                    <h2>body: {{this.body}}</h2>
+                    <a href="#"><img src="{{this.rec_img}}"></a>
+                </div>
+            {{/each}}
+{{!-- 
+
             <div class="carousel-item  white-text" href="#two!">
                 <h2>Your Recommendations</h2>
                 <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
@@ -73,7 +82,9 @@
             <div class="carousel-item  white-text" href="#four!">
                 <h2>Your Recommendations</h2>
                 <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-            </div>
+            </div> --}}
+
+
         </div>
     </div>
 
