@@ -6,7 +6,7 @@
                 <a href="#" class="brand-logo"><img class="logobutton" src="/images/hand.png" alt="logo"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="profile">Profile Page </a></li>
+                    {{!-- <li><a href="profile">Profile Page </a></li> --}}
                     <li><a href="entrypage">Explore</a></li>
                     <li><a href="login">Sign out</a></li>
                 </ul>
@@ -27,321 +27,337 @@
         <li><a href="collapsible.html">Javascript</a></li>
         <li><a href="mobile.html">Mobile</a></li>
     </ul>
-</div>
-<div class="row right-align">
-    <button id="upload_widget" class="cloudinary-button">Change Profile Picture</button>
-</div>
 
-<div class="row center-align">
+       {{!------------ moving images here, copy across pages: --}}
+    <div>
+        <img src="/images/curve1.png" alt="shape1" class="curve1">
+        <img src="/images/curve2.png" alt="shape2" class="curve2">
+        <img src="/images/curve3.png" alt="shape3" class="curve3">
+        <img src="/images/curve4.png" alt="shape4" class="curve4">
+    </div>
+    {{!----------- end here --}}
 
-    <img src="{{User.profileurl}}" alt="profile picture" class="profile_image">
+    <div class="row right-align">
+        <button id="upload_widget" class="cloudinary-button">Change Profile Picture</button>
+    </div>
+
+    {{!-- getting validation on code for what for --}}
+    
+    {{!-- <img src="{{User.profileurl}}" alt="profile picture" class="profile_image">
     <h4>Logged in as: {{User.firstname}} {{User.lastname}}</h4>
     <h4>Bio:</h4>
-    <h5>{{User.bio}}</h5>
-</div>
+    <h5>{{User.bio}}</h5> --}}
 
+    <div class="row center-align">
 
-<div class="row">
-    <div class="col s2">
-        <img class="arrow" src="/images/arrow_left.png" alt="left arrow">
+        <img src="{{singleUser.profileurl}}" alt="profile picture" class="profile_image">
+        <h4>Logged in as: {{singleUser.firstname}} {{singleUser.lastname}}</h4>
+        <h4>Bio:</h4>
+        <h5>{{singleUser.bio}}</h5>
     </div>
 
-    <div class="col s8">
-        <div class="carousel carousel-slider center">
-            <div class="carousel-fixed-item center">
-            </div>
 
-            {{#each Recos}}
-                <div class="carousel-item  white-text" href="#one!">
-                    <h2>cat: {{this.category}}</h2>
-                    <h2>body: {{this.body}}</h2>
-                    <a href="#"><img src="{{this.rec_img}}"></a>
+    <div class="row">
+        <div class="col s2">
+            <img class="arrow" src="/images/arrow_left.png" alt="left arrow">
+        </div>
+
+        <div class="col s8">
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item center">
                 </div>
-            {{/each}}
-{{!-- 
 
-            <div class="carousel-item  white-text" href="#two!">
-                <h2>Your Recommendations</h2>
-                <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-            </div>
-            <div class="carousel-item  white-text" href="#three!">
-                <h2>Your Recommendations</h2>
-                <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-            </div>
-            <div class="carousel-item  white-text" href="#four!">
-                <h2>Your Recommendations</h2>
-                <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-            </div> --}}
-
-
-        </div>
-    </div>
-
-    <div class="col s2">
-        <img class="arrow" src="/images/arrow_right.png" alt="right arrow">
-    </div>
-
-</div>
-<br>
-<div class="row">
-    <div class="col s2">
-        <img class="arrow" src="/images/arrow_left.png" alt="left arrow">
-    </div>
-
-    <div class="col s8">
-        <div class="carousel carousel-slider center">
-            <div class="carousel-fixed-item center">
-            </div>
-            <div class="carousel-item  white-text" href="#one!">
-                <h2>Your Favorites</h2>
-                <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-            </div>
-            <div class="carousel-item  white-text" href="#two!">
-                <h2>Your Favorites</h2>
-                <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-            </div>
-            <div class="carousel-item  white-text" href="#three!">
-                <h2>Your Favorites</h2>
-                <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-            </div>
-            <div class="carousel-item  white-text" href="#four!">
-                <h2>Your Favorites</h2>
-                <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col s2">
-        <img class="arrow" src="/images/arrow_right.png" alt="right arrow">
-    </div>
-
-</div>
-
-<br>
-
-<div class="row center-align">
-    <a class="waves-effect waves-light btn">Add a Recommendation</a>
-</div>
-{{!-- hide or insert this div --}}
-<div class="hide-div">
-    <div class="center-align">
-        <div class="row">
-            <p>Select Category</p>
-        </div>
-        <div class="row">
-            <div class="col s3">
-            </div>
-
-            <div class="input-field col s6  light_background">
-                <select class="icons">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="" data-icon="/images/blank_profile.png">example 1</option>
-                    <option value="" data-icon="/images/blank_profile.png">example 2</option>
-                    <option value="" data-icon="/images/blank_profile.png">example 3</option>
-                </select>
-            </div>
-
-            <div class="col s3">
-            </div>
-        </div>
-        <div class="row">
-            <p>Product Description</p>
-        </div>
-        <div class="row">
-            <div class="col s3">
-            </div>
-
-            <div class="col s6  light_background">
-                <form>
-                    <div class="row">
-                        <div class="input-field">
-                            {{!-- <i class="material-icons prefix">mode_edit</i> --}}
-                            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                            <label for="icon_prefix2">Description</label>
-                        </div>
+                {{#each Recos}}
+                    <div class="carousel-item  white-text" href="#one!">
+                        <h2>cat: {{this.category}}</h2>
+                        <h2>body: {{this.body}}</h2>
+                        <a href="#"><img src="{{this.rec_img}}"></a>
                     </div>
-                </form>
-            </div>
+                {{/each}}
+    {{!-- 
 
-            <div class="col s3">
+                <div class="carousel-item  white-text" href="#two!">
+                    <h2>Your Recommendations</h2>
+                    <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
+                </div>
+                <div class="carousel-item  white-text" href="#three!">
+                    <h2>Your Recommendations</h2>
+                    <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
+                </div>
+                <div class="carousel-item  white-text" href="#four!">
+                    <h2>Your Recommendations</h2>
+                    <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
+                </div> --}}
+
+
             </div>
         </div>
-        <div class="row">
-            <p>Upload Image to use</p>
-        </div>
-        <div class="row">
-            <div class="col s3">
-            </div>
 
-            <div class="col s6  light_background">
-                <form action="#">
-                    <div class="file-field input-field">
-                        <div class="btn">
-                            <span>File</span>
-                            <input type="file">
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
-                        </div>
-                    </div>
-                </form>
-            </div>
+        <div class="col s2">
+            <img class="arrow" src="/images/arrow_right.png" alt="right arrow">
+        </div>
 
-            <div class="col s3">
+    </div>
+    <br>
+    <div class="row">
+        <div class="col s2">
+            <img class="arrow" src="/images/arrow_left.png" alt="left arrow">
+        </div>
+
+        <div class="col s8">
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item center">
+                </div>
+                <div class="carousel-item  white-text" href="#one!">
+                    <h2>Your Favorites</h2>
+                    <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
+                </div>
+                <div class="carousel-item  white-text" href="#two!">
+                    <h2>Your Favorites</h2>
+                    <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
+                </div>
+                <div class="carousel-item  white-text" href="#three!">
+                    <h2>Your Favorites</h2>
+                    <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
+                </div>
+                <div class="carousel-item  white-text" href="#four!">
+                    <h2>Your Favorites</h2>
+                    <a href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
+                </div>
             </div>
         </div>
+
+        <div class="col s2">
+            <img class="arrow" src="/images/arrow_right.png" alt="right arrow">
+        </div>
+
     </div>
 
     <br>
-    <br>
 
-    <div class="center-align">
-        <div class="row">
-            <p>Select Category</p>
-        </div>
-        <div class="row">
-            <div class="col s3">
+    <div class="row center-align">
+        <a class="waves-effect waves-light btn">Add a Recommendation</a>
+    </div>
+    {{!-- hide or insert this div --}}
+    <div class="hide-div">
+        <div class="center-align">
+            <div class="row">
+                <p>Select Category</p>
             </div>
+            <div class="row">
+                <div class="col s3">
+                </div>
 
-            <div class="input-field col s6  light_background">
-                <select class="icons">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="" data-icon="/images/blank_profile.png">example 1</option>
-                    <option value="" data-icon="/images/blank_profile.png">example 2</option>
-                    <option value="" data-icon="/images/blank_profile.png">example 3</option>
-                </select>
-            </div>
+                <div class="input-field col s6  light_background">
+                    <select class="icons">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" data-icon="/images/blank_profile.png">example 1</option>
+                        <option value="" data-icon="/images/blank_profile.png">example 2</option>
+                        <option value="" data-icon="/images/blank_profile.png">example 3</option>
+                    </select>
+                </div>
 
-            <div class="col s3">
+                <div class="col s3">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <p>Product Description</p>
-        </div>
-        <div class="row">
-            <div class="col s3">
+            <div class="row">
+                <p>Product Description</p>
             </div>
+            <div class="row">
+                <div class="col s3">
+                </div>
 
-            <div class="col s6  light_background">
-                <form>
-                    <div class="row">
-                        <div class="input-field">
-                            {{!-- <i class="material-icons prefix">mode_edit</i> --}}
-                            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                            <label for="icon_prefix2">Description</label>
+                <div class="col s6  light_background">
+                    <form>
+                        <div class="row">
+                            <div class="input-field">
+                                {{!-- <i class="material-icons prefix">mode_edit</i> --}}
+                                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                                <label for="icon_prefix2">Description</label>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </div>
 
-            <div class="col s3">
+                <div class="col s3">
+                </div>
+            </div>
+            <div class="row">
+                <p>Upload Image to use</p>
+            </div>
+            <div class="row">
+                <div class="col s3">
+                </div>
+
+                <div class="col s6  light_background">
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col s3">
+                </div>
             </div>
         </div>
-        <div class="row">
-            <p>Upload Image to use</p>
+
+        <br>
+        <br>
+
+        <div class="center-align">
+            <div class="row">
+                <p>Select Category</p>
+            </div>
+            <div class="row">
+                <div class="col s3">
+                </div>
+
+                <div class="input-field col s6  light_background">
+                    <select class="icons">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" data-icon="/images/blank_profile.png">example 1</option>
+                        <option value="" data-icon="/images/blank_profile.png">example 2</option>
+                        <option value="" data-icon="/images/blank_profile.png">example 3</option>
+                    </select>
+                </div>
+
+                <div class="col s3">
+                </div>
+            </div>
+            <div class="row">
+                <p>Product Description</p>
+            </div>
+            <div class="row">
+                <div class="col s3">
+                </div>
+
+                <div class="col s6  light_background">
+                    <form>
+                        <div class="row">
+                            <div class="input-field">
+                                {{!-- <i class="material-icons prefix">mode_edit</i> --}}
+                                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                                <label for="icon_prefix2">Description</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col s3">
+                </div>
+            </div>
+            <div class="row">
+                <p>Upload Image to use</p>
+            </div>
+            <div class="row">
+                <div class="col s3">
+                </div>
+
+                <div class="col s6  light_background">
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col s3">
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col s3">
+
+        <br>
+        <br>
+
+        <div class="center-align">
+            <div class="row">
+                <p>Select Category</p>
+            </div>
+            <div class="row">
+                <div class="col s3">
+                </div>
+
+                <div class="input-field col s6  light_background">
+                    <select class="icons">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" data-icon="/images/blank_profile.png">example 1</option>
+                        <option value="" data-icon="/images/blank_profile.png">example 2</option>
+                        <option value="" data-icon="/images/blank_profile.png">example 3</option>
+                    </select>
+                </div>
+
+                <div class="col s3">
+                </div>
+            </div>
+            <div class="row">
+                <p>Product Description</p>
+            </div>
+            <div class="row">
+                <div class="col s3">
+                </div>
+
+                <div class="col s6  light_background">
+                    <form>
+                        <div class="row">
+                            <div class="input-field">
+                                {{!-- <i class="material-icons prefix">mode_edit</i> --}}
+                                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                                <label for="icon_prefix2">Description</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col s3">
+                </div>
+            </div>
+            <div class="row">
+                <p>Upload Image to use</p>
+            </div>
+            <div class="row">
+                <div class="col s3">
+                </div>
+
+                <div class="col s6  light_background">
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col s3">
+                </div>
             </div>
 
-            <div class="col s6  light_background">
-                <form action="#">
-                    <div class="file-field input-field">
-                        <div class="btn">
-                            <span>File</span>
-                            <input type="file">
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
-                        </div>
-                    </div>
-                </form>
+            <div class="bottom-margin">
             </div>
 
-            <div class="col s3">
-            </div>
         </div>
     </div>
 
-    <br>
-    <br>
-
-    <div class="center-align">
-        <div class="row">
-            <p>Select Category</p>
+    <div class="row fixed-row-bottom">
+        <div class="row footer">
+            <p class="copyright">Copyright 2020, all rights reserved</p>
         </div>
-        <div class="row">
-            <div class="col s3">
-            </div>
-
-            <div class="input-field col s6  light_background">
-                <select class="icons">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="" data-icon="/images/blank_profile.png">example 1</option>
-                    <option value="" data-icon="/images/blank_profile.png">example 2</option>
-                    <option value="" data-icon="/images/blank_profile.png">example 3</option>
-                </select>
-            </div>
-
-            <div class="col s3">
-            </div>
-        </div>
-        <div class="row">
-            <p>Product Description</p>
-        </div>
-        <div class="row">
-            <div class="col s3">
-            </div>
-
-            <div class="col s6  light_background">
-                <form>
-                    <div class="row">
-                        <div class="input-field">
-                            {{!-- <i class="material-icons prefix">mode_edit</i> --}}
-                            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                            <label for="icon_prefix2">Description</label>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-            <div class="col s3">
-            </div>
-        </div>
-        <div class="row">
-            <p>Upload Image to use</p>
-        </div>
-        <div class="row">
-            <div class="col s3">
-            </div>
-
-            <div class="col s6  light_background">
-                <form action="#">
-                    <div class="file-field input-field">
-                        <div class="btn">
-                            <span>File</span>
-                            <input type="file">
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-            <div class="col s3">
-            </div>
-        </div>
-
-        <div class="bottom-margin">
-        </div>
-
     </div>
-</div>
-
-<div class="row fixed-row-bottom">
-    <div class="row footer">
-        <p class="copyright">Copyright 2020, all rights reserved</p>
-    </div>
-</div>
 </div>
