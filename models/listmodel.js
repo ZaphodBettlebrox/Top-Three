@@ -17,7 +17,11 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: false
       }
     });
-    List.hasMany(models.UserRec);
+    List.hasMany(models.UserRec,{
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
 
   // ASSOCIATE List with user rec table? 

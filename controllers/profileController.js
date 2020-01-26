@@ -5,26 +5,75 @@ const router = express.Router();
 
 //route to show profile info
 // Create all our routes and set up logic within those routes where required.
-router.get("/", function (req, res) {
-    db.User.findAll({
-            raw: true
-        }).then(function (data) {
-            db.User.findOne({
-                raw: true,
-                where: {
-                    id : req.session.user.id
-                }
-            }
-            ).then(function (singledata){
+// router.get("/", function (req, res) {
+//     db.User.findOne({
+//         raw: true,
+//         //attributes: ['id', 'firstname'],
+//         where: {
+//             id : req.session.user.id
+//         },
+//         include: [
+//             {model: db.List}
+//         ]
+//     }
+//     ).then(function (userData){
+//         console.log("profile controller js/")
+//         console.log(JSON.stringify(userData))
+//         console.log(userData)
 
-                console.log(JSON.stringify(singledata))
-                var hbsObject = {
-                    User: data,
-                    singleUser: singledata
-                };
-                res.render("profile", hbsObject);
-            })
-        });
+//         db.UserRec.findAll({
+//             raw:true,
+//             where: {
+//                 ListId
+//             }
+//         })
+
+//         var hbsObject = {
+//             User: userData
+//         };
+//         res.render("profile", hbsObject);
+//     })
+// });
+
+
+
+router.get("/", function (req, res) {
+    db.User.findOne({
+        raw: true,
+        where: {
+            id : req.session.user.id
+        }
+    }
+    ).then(function (userData){
+        // console.log("profile controller js/")
+    
+        db.UserRec.findAll({
+            raw:true,
+            where: {
+                UserId : req.session.user.id
+            },
+            include: [{model: db.List}]
+        }).then(function(recData){
+            console.log("rec data incoming");
+
+            // the below is needed because findAll creates a list with an additional dictionary inside of it.
+            // Therefore a for loop was needed to pull out the deeper array.
+            recData = recData.map(e=>{
+                return {
+                    rec_img: e.rec_img,
+                    body : e.body,
+                    category : e["List.category"]
+                }
+            }) 
+            
+                    var hbsObject = {
+                        User: userData,
+                        Recos: recData
+                    };
+                    res.render("profile", hbsObject);
+        })
+
+    })
 });
 
 
