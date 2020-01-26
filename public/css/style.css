@@ -121,6 +121,21 @@ body{
   margin-bottom: 11vh;
 }
 
+
+.userinfobox{
+  height: 400px;
+}
+
+.allUserImg{
+  width:10%;
+  height:auto;
+}
+
+.chosenimg{
+  height: 100%;
+  width: 100%;
+}
+
 /* .userimgbox{
     margin-top: 50px;
     height: 30vh;
@@ -175,6 +190,7 @@ body{
   animation-delay: .7s;
 
 }
+
 /* light bottom shape */
 .curve2 {
   position: fixed;

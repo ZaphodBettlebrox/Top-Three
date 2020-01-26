@@ -19,25 +19,32 @@ router.get("/test", function (req, res) {
   });
 });
 
-// //display all users's list in a specific category  
-// router.get("/userlist", function (req,res) {
-//   db.
-// })
 
 
 
-// //display a specific user's personal and list  
-// router.get("/", function (req,res) {
-//   db.
-// })
+// //display a specific user's product and list  
+router.get("/grablistproduct/:id/:category", function (req,res) {
+  db.UserRec.findAll({
+    include: [{model: db.List}],
+    include: [{model: db.Product}],
+    where:{
+      UserId: req.params.id,
+      category: req.params.category
+    }
+  }).then(function (dbList) {
+    res.json(dbList);
+  });
+})
 
 
 
-//get request for user of that category
+//get list data joined with user table by category
 router.get("/grabuser/:category", function (req, res) {
   console.log(req.params.category)
   db.List.findAll({
     include:[db.User],
+    include:[db.List],
+    include:[db.Product],
     where: {
       category: req.params.category
     }

@@ -1,19 +1,5 @@
 <div class="container-fluid">
 
-    <div class="row">
-        <nav>
-            <div class="nav-wrapper gradient-header">
-                <a href="#" class="brand-logo"><img class="logobutton" src="/images/hand.png" alt="logo"></a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    {{!-- <li><a href="profile">Profile Page </a></li> --}}
-                    <li><a href="entrypage">Explore</a></li>
-                    <li><a href="login">Sign out</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
 
     <script type="text/javascript">
@@ -29,12 +15,12 @@
     </ul>
 
        {{!------------ moving images here, copy across pages: --}}
-    <div>
+    {{!-- <div>
         <img src="/images/curve1.png" alt="shape1" class="curve1">
         <img src="/images/curve2.png" alt="shape2" class="curve2">
         <img src="/images/curve3.png" alt="shape3" class="curve3">
         <img src="/images/curve4.png" alt="shape4" class="curve4">
-    </div>
+    </div> --}}
     {{!----------- end here --}}
 
     <div class="row right-align">
@@ -43,17 +29,14 @@
 
     {{!-- getting validation on code for what for --}}
     
-    {{!-- <img src="{{User.profileurl}}" alt="profile picture" class="profile_image">
-    <h4>Logged in as: {{User.firstname}} {{User.lastname}}</h4>
-    <h4>Bio:</h4>
-    <h5>{{User.bio}}</h5> --}}
+
 
     <div class="row center-align">
 
-        <img src="{{singleUser.profileurl}}" alt="profile picture" class="profile_image">
-        <h4>Logged in as: {{singleUser.firstname}} {{singleUser.lastname}}</h4>
-        <h4>Bio:</h4>
-        <h5>{{singleUser.bio}}</h5>
+    <img src="{{User.profileurl}}" alt="profile picture" class="profile_image">
+    <h4>Logged in as: {{User.firstname}} {{User.lastname}}</h4>
+    <h4>Bio:</h4>
+    <h5>{{User.bio}}</h5>
     </div>
 
 
