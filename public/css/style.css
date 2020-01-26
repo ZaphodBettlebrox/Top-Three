@@ -155,8 +155,8 @@ body{
 .curve1 {
   position: fixed;
   z-index: -1;
-  top: -50px;
-  right: -30px;
+  top: -4vh;
+  right: -2vw;
   width: 30%;
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   animation-name: curve1-ani;
@@ -168,8 +168,8 @@ body{
 .curve4 {
   position: fixed;
   z-index: -1;
-  top: -70px;
-  left: -50px;
+  top: -5vh;
+  left: -3vw;
   width: 25%;
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   animation-name: curve4-ani;
@@ -183,8 +183,8 @@ body{
 .curve2 {
   position: fixed;
   z-index: -1;
-  bottom: -170px;
-  right: -10px;
+  bottom: -25vh;
+  right: -1vw;
   width: 110vw;
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   animation-name: curve2-ani;
@@ -197,8 +197,8 @@ body{
 .curve3 {
   position: fixed;
   z-index: -2;
-  bottom: -180px;
-  left: -70px;
+  bottom: -30vh;
+  left: -7vw;
   width: 150vw;
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   transform: rotate(3deg);
@@ -211,61 +211,61 @@ body{
 /* right top */
 @keyframes curve1-ani {
   0% {
-    top: -50px;
-    right: -30px;
+    top: -4vh;
+    right: -2vw;
   }
   50% {
-    top: -40px;
-    right: -35px;
+    top: -4.5vh;
+    right: -2.5vw;
   }
   100% {
-    top: -50px;
-    right: -30px;
+    top: -4vh;
+    right: -2vw;
   }
 }
 /* light bottom shape */
 @keyframes curve2-ani {
   0% {
-    bottom: -170px;
-    right: -10px;
+    bottom: -25vh;
+    right: -1vw;
   }
   50% {
-    bottom: -165px;
-    right: -5px;
+    bottom: -24.5vh;
+    right: -2vw;
   }
   100% {
-    bottom: -170px;
-    right: -10px;
+    bottom: -25vh;
+    right: -1vw;
   }
 }
 /* dark bottom shape */
 @keyframes curve3-ani{
     0% {
-        bottom: -180px;
-        left: -70px;
+        bottom: -30vh;
+        left: -7vw;
     }
     50% {
-        bottom: -187px;
-        left: -72px;
+        bottom: -30.5vh;
+        left: -7.3vw;
     }
 
     100% {
-        bottom: -180px;
-        left: -70px;
+        bottom: -30vh;
+        left: -7vw;
     }
 }
 /* left top */
 @keyframes curve4-ani{
     0% {
-         top: -70px;
-        left: -50px;
+         top: -5vh;
+        left: -3vw;
     }
     50% {
-         top: -75px;
-        left: -45px;
+         top: -4.5vh;
+        left: -3.5vw;
     }
     100% {
-         top: -70px;
-        left: -50px;
+         top: -5vh;
+        left: -3vw;
     }
 }
