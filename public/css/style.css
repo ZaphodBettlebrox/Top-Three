@@ -113,7 +113,7 @@ height: 10vh;
     background: rgba(209, 209, 209, 0.301);
 }
 
-.userimgbox{
+/* .userimgbox{
     margin-top: 50px;
     height: 30vh;
     width: 42vh;
@@ -122,13 +122,9 @@ height: 10vh;
 .image{
     width:100%;
     height:100%;
-    /* padding: 20px */
+   
 }
 
-/* .carousel-item{
-    display: flex;
-    justify-content: space-evenly
-} */
 
 .userreccarousel{
     height: 80vh !important;
@@ -136,7 +132,7 @@ height: 10vh;
     border-radius: 30px;
     background-color: rgba(49, 48, 48, 0.733) !important;
 
-}
+} */
 @media screen and (max-width: 600px) {
     .column {
       width: 100%;
