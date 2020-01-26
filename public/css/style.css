@@ -118,7 +118,11 @@ body{
   margin-top: 5vh;
 }
 .signup-form {
-  margin-bottom: 11vh;
+  background-color: rgba(66, 63, 63, 0.644);
+  margin-left: 8%;
+  margin-right:8%;
+  border-radius: 15px;
+  margin-top: 5%;
 }
 
 
