@@ -121,7 +121,7 @@ body{
   margin-bottom: 11vh;
 }
 
-.userimgbox{
+/* .userimgbox{
     margin-top: 50px;
     height: 30vh;
     width: 42vh;
@@ -130,13 +130,9 @@ body{
 .image{
     width:100%;
     height:100%;
-    /* padding: 20px */
+   
 }
 
-/* .carousel-item{
-    display: flex;
-    justify-content: space-evenly
-} */
 
 .userreccarousel{
     height: 80vh !important;
@@ -144,7 +140,7 @@ body{
     border-radius: 30px;
     background-color: rgba(49, 48, 48, 0.733) !important;
 
-}
+} */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
