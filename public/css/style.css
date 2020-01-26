@@ -59,7 +59,7 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  /* font-size: 10vw; */
+  font-size: 10vw;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -82,6 +82,23 @@ body{
 
 .fancy {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.backed {
+  background-image: url(https://res.cloudinary.com/tyson/image/upload/v1580066812/recbar_bwugxa.png); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+  opacity: 0.6;
+}
+
+.list {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+  opacity: 0.0;
 }
 
 .carousel-shrink {
@@ -161,6 +178,7 @@ body{
 
 } */
 
+/* transparanet box */
 .createrecbox{
   height: 60vh;
   background-color: rgba(66, 63, 63, 0.644);
