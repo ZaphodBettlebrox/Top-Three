@@ -22,13 +22,13 @@ router.get("/test", function (req, res) {
 
 
 
-// //display a specific user's product and list  
+// //grabbing a user's list and joining user rec to it.  Need to also pull in product
 router.get("/grablistproduct/:id", function (req,res) {
-  db.List.findAll({
-    include:[db.UserRec],
+  db.List.findOne({
     where:{
       id: req.params.id,
-    }
+    },
+    include:[{model:db.UserRec, include: [{model: db.Product}]}],
   }).then(function (dbList) {
     res.json(dbList);
   });
