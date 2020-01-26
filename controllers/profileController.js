@@ -40,15 +40,12 @@ const router = express.Router();
 router.get("/", function (req, res) {
     db.User.findOne({
         raw: true,
-        //attributes: ['id', 'firstname'],
         where: {
             id : req.session.user.id
         }
     }
     ).then(function (userData){
-        console.log("profile controller js/")
-        console.log(JSON.stringify(userData))
-        console.log(userData)
+        // console.log("profile controller js/")
     
         db.UserRec.findAll({
             raw:true,
@@ -58,7 +55,16 @@ router.get("/", function (req, res) {
             include: [{model: db.List}]
         }).then(function(recData){
             console.log("rec data incoming");
-            console.log(recData);
+
+            // the below is needed because findAll creates a list with an additional dictionary inside of it.
+            // Therefore a for loop was needed to pull out the deeper array.
+            recData = recData.map(e=>{
+                return {
+                    rec_img: e.rec_img,
+                    body : e.body,
+                    category : e["List.category"]
+                }
+            }) 
             
                     var hbsObject = {
                         User: userData,
