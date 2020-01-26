@@ -17,7 +17,7 @@
     padding: 2vh;
 }
 body{
-    background: linear-gradient(to right, rgb(52, 199, 240),#63B882 , rgb(133, 5, 133));
+    background: linear-gradient(to right, rgb(52, 199, 240),rgb(116, 223, 139) , rgb(133, 5, 133));
     height: 100vh;
 }
 .gradient-header{

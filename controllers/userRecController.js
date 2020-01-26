@@ -35,6 +35,7 @@ router.get("/test", function (req, res) {
 
 //get request for user of that category
 router.get("/grabuser/:category", function (req, res) {
+  console.log(req.params.category)
   db.List.findAll({
     include:[db.User],
     where: {
