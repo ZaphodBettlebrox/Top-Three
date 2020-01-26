@@ -84,15 +84,16 @@ router.post("/newProd", function (req, res) {
 })
 
 
-
-
-router.get("/", function (req, res) {
+//grabs all the list and joins with user rec
+router.get("/test", function (req, res) {
   db.List.findAll({
-    // include:[db.User]
+    include:[db.UserRec]
   }).then(function (dbList) {
     res.json(dbList);
   });
 });
+
+
 // 1 specific category, multiple user lists. THIS will need to be a join.
 router.get("/api/:id", function (req, res) {
   // time to join and include the proper top 3 search params.
