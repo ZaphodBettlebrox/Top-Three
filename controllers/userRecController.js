@@ -22,15 +22,13 @@ router.get("/test", function (req, res) {
 
 
 
-// //display a specific user's product and list  
-router.get("/grablistproduct/:id/:category", function (req,res) {
-  db.UserRec.findAll({
-    include: [{model: db.List}],
-    include: [{model: db.Product}],
+// //grabbing a user's list and joining user rec to it.  Need to also pull in product
+router.get("/grablistproduct/:id", function (req,res) {
+  db.List.findOne({
     where:{
-      UserId: req.params.id,
-      category: req.params.category
-    }
+      id: req.params.id,
+    },
+    include:[{model:db.UserRec, include: [{model: db.Product}]}],
   }).then(function (dbList) {
     res.json(dbList);
   });
@@ -43,8 +41,6 @@ router.get("/grabuser/:category", function (req, res) {
   console.log(req.params.category)
   db.List.findAll({
     include:[db.User],
-    include:[db.List],
-    include:[db.Product],
     where: {
       category: req.params.category
     }
@@ -52,7 +48,6 @@ router.get("/grabuser/:category", function (req, res) {
     res.json(data);
   })
 });
-
 
 
 module.exports = router
