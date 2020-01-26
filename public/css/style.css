@@ -135,7 +135,11 @@ body{
   margin-top: 5vh;
 }
 .signup-form {
-  margin-bottom: 11vh;
+  background-color: rgba(66, 63, 63, 0.644);
+  margin-left: 8%;
+  margin-right:8%;
+  border-radius: 15px;
+  margin-top: 5%;
 }
 
 
@@ -173,6 +177,14 @@ body{
     background-color: rgba(49, 48, 48, 0.733) !important;
 
 } */
+
+/* transparanet box */
+.createrecbox{
+  height: 60vh;
+  background-color: rgba(66, 63, 63, 0.644);
+}
+
+
 
 @media screen and (max-width: 600px) {
   .column {
