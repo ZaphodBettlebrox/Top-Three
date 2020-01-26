@@ -19,18 +19,27 @@ $(document).ready(function () {
         })
     })
 
-    //append data to all user rec page
+    //store data by session and use it to display on the all user rec page
     console.log(JSON.parse(sessionStorage.getItem("allUserData")));
     console.log(sessionStorage.getItem("catImage"))
     let allUserData = JSON.parse(sessionStorage.getItem("allUserData"))
     let categoryImage = sessionStorage.getItem("catImage")
     if (categoryImage != null && allUserData != null) {
-
+        //for loop to append all the data in allUserData array
         allUserData.forEach(data => {
-            const displayUsers = $(`<div class="displayUserinfo"><h4>${data.User.username}</h4><img src="${data.User.profileurl}" alt=""></div>`)
-            $(".userinfobox").append(displayUsers)
-            const catImg = (`<h4 class="centered">${data.category}</h4><img class="chosenimg" src = "${categoryImage}">`)
+            const displayUsers = $(`<div class="catContainer col s12"><div class="displayUserinfo" id="${data.id}"><div class="userinfobox"><h4>${data.User.username}</h4><img class="responsive_img allUserImg" src="${data.User.profileurl}" alt=""></div>`)
+            $(".container").append(displayUsers)
+            const catImg = (`<h4 class="centered">${data.category}</h4><img class="chosenimg" src = "${categoryImage}">
+            </div></div>`)
             $(".userinfobox").append(catImg)
         })
     }
+
+    $(".displayUserinfo").on("click", event => {
+        const listId = $(this).attr('id')
+        console.log(listId)
+    })
+
+
+
 });
