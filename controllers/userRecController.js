@@ -28,12 +28,12 @@ router.get("/grablistproduct/:id", function (req,res) {
     where:{
       id: req.params.id,
     },
-    include:[{model:db.UserRec, include:[{model: db.Product}]}],
+    include:[{model:db.UserRec, include:[{model: db.Product}]},
+    {model: db.User}]
   }).then(function (dbList) {
     res.json(dbList);
   });
 })
-
 
 
 //get list data joined with user table by category

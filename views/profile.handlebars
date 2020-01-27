@@ -7,21 +7,12 @@
     </script>
     {{!-- CLOUDINARY WIDGET --}}
 
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-    </ul>
-
     {{!------------ moving images here, copy across pages: --}}
-    {{!-- <div>
+    <div>
         <img src="/images/curve1.png" alt="shape1" class="curve1">
-        <img src="/images/curve2.png" alt="shape2" class="curve2">
-        <img src="/images/curve3.png" alt="shape3" class="curve3">
         <img src="/images/curve4.png" alt="shape4" class="curve4">
-    </div> --}}
-    {{!----------- end here --}}
+    </div>
+    {{!----------- end here--}}
 
 
 
@@ -30,12 +21,16 @@
 
 
     <div class="row center-align">
-
         <img src="{{User.profileurl}}" alt="profile picture" class="profile_image">
+    </div>
+    <div class="row center-align">
         <button id="upload_widget" class="cloudinary-button">Change Profile Picture</button>
-        <h4>Logged in as: {{User.firstname}} {{User.lastname}}</h4>
-        <h4>Bio:</h4>
-        <h5>{{User.bio}}</h5>
+        <div class="row signup-form profile-box">
+            <h4>Logged in as: {{User.firstname}} {{User.lastname}}</h4>
+            <h4>Bio:</h4>
+            <h5>{{User.bio}}</h5>
+        </div>
+
     </div>
 
 
@@ -100,9 +95,9 @@
         </div>
 
 
-    <div class="row fixed-row-bottom">
-        <div class="row footer">
-            <p class="copyright">Copyright 2020, all rights reserved</p>
+        <div class="row fixed-row-bottom">
+            <div class="row footer">
+                <p class="copyright">Copyright 2020, all rights reserved</p>
+            </div>
         </div>
     </div>
-</div>
