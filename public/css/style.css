@@ -5,19 +5,32 @@
 .fixed-row-bottom {
   position: fixed;
   bottom: 0;
+  z-index: 2;
 }
 
 .footer {
   background: rgb(29, 28, 28);
   width: 100vw;
-  height: 5vh;
+  height: 7vh;
   margin: 0;
   text-align: center;
 }
 
+.sidenav{
+  /* z-index: 2; */
+  background: rgb(29, 28, 28);
+}
+
+a{
+  color: whitesmoke !important;
+}
+
+
 .copyright {
   color: white;
-  padding: 2vh;
+  padding-top: 3vh;
+  font-size: 1.2vh;
+
 }
 
 body {
@@ -28,7 +41,9 @@ body {
 }
 
 .gradient-header {
-  background: rgb(29, 28, 28)
+  background: rgb(29, 28, 28);
+  z-index: 2;
+
 }
 
 .signin {
@@ -60,6 +75,10 @@ body {
   margin: 5px;
 
 
+}
+
+.indicators{
+  z-index: 1;
 }
 
 .category{
@@ -153,17 +172,29 @@ body {
   color: white;
 }
 
+.submit-button{
+  margin-top: 3vh;
+}
+
 .signin-logo {
   width: 10vw;
   margin-top: 5vh;
 }
 
+.cloudinary-button{
+
+  font-size: 2px;
+}
+
 .signup-form {
-  background-color: rgba(43, 42, 42, 0.644);
+  background-color: rgba(31, 30, 30, 0.644);
   margin-left: 8%;
   margin-right: 8%;
   border-radius: 15px;
   margin-top: 5%;
+  margin-bottom: 10vh;
+  padding-bottom: 4vh;
+  color: white;
 }
 
 .userRecContainer {
@@ -192,12 +223,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  background-color: rgba(43, 42, 42, 0.644);
+  background-color: rgba(31, 30, 30, 0.644);
 
 }
 
 .userinfobox {
-  background-color: rgba(43, 42, 42, 0.644);
+  background-color: rgba(31, 30, 30, 0.644);
   height: 100%;
   position: relative;
 
@@ -208,16 +239,23 @@ body {
   height: auto;
 }
 
+.aUserImg{
+  width: 20%;
+  height: auto;
+  border-radius: 20px;
+}
+
 .chosenimg {
   height: 100%;
   width: 100%;
 }
 
 .userimgbox{
-    margin-top: 50px;
-    height: 30vh;
-    width: 42vh;
+    margin-top: 5px;
+    /* height: 30vh; */
+    /* width: 42vh; */
 }
+
 
 .image{
     width:100%;
@@ -226,19 +264,28 @@ body {
 
 
 .userreccarousel{
-    height: 70vh !important;
-    margin-top:10vh;
+    /* height: 50vh !important; */
+    margin-top: 10px;
     border-radius: 30px;
-    background-color: rgba(49, 48, 48, 0.733) !important;
+    background-color: rgba(31, 30, 30, 0.644) !important;
+    margin-bottom: 10%;
 
 }
 
 /* transparanet box */
 .createrecbox {
   height: 60vh;
-  background-color: rgba(66, 63, 63, 0.644);
+  background-color: rgba(31, 30, 30, 0.644);
 }
 
+
+.name{
+  margin-left: 3vw;
+  font-size: 4vh;
+}
+.profile-box{
+  padding-top: 3vh;
+}
 
 
 @media screen and (max-width: 600px) {
@@ -256,7 +303,7 @@ body {
   width: 30%;
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   animation-name: curve1-ani;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -270,7 +317,7 @@ body {
   width: 25%;
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   animation-name: curve4-ani;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-delay: .7s;
@@ -286,7 +333,7 @@ body {
   width: 110vw;
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   animation-name: curve2-ani;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-delay: 0.5s;
@@ -302,7 +349,7 @@ body {
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   transform: rotate(3deg);
   animation-name: curve3-ani;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-delay: .2s;

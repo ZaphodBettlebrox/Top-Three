@@ -36,7 +36,6 @@ router.get("/grablistproduct/:id", function (req,res) {
 })
 
 
-
 //get list data joined with user table by category
 router.get("/grabuser/:category", function (req, res) {
   console.log(req.params.category)

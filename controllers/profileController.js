@@ -62,7 +62,8 @@ router.get("/", function (req, res) {
                 return {
                     rec_img: e.rec_img,
                     body : e.body,
-                    category : e["List.category"]
+                    category : e["List.category"],
+                    ListId: e.ListId
                 }
             }) 
             
@@ -89,7 +90,7 @@ router.put("/:id", function (req, res) {
         },
         {
             where: {
-                id: req.body.id
+                id: req.session.user.id
             }
         })
         .then(function (Userdb) {
@@ -119,9 +120,19 @@ router.post("/setprofileurl", function (req, res) {
 
 
 //route to delete your account
+router.delete("/delete", function (req, res){
+    db.User.destroy(
+    {
+        where: {
+        id: req.session.user.id
+        }
+    }
+    ).then (function (Userdb){
+    console.log("User removed" + Userdb)
+    res.redirect("/")
 
-
-
+    })
+});
 
 //route account to view user's recommendation
 
