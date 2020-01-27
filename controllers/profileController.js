@@ -120,7 +120,7 @@ router.post("/setprofileurl", function (req, res) {
 
 
 //route to delete your account
-router.delete("/delete", function (req, res){
+router.delete("/delete/:id", function (req, res){
     db.User.destroy(
     {
         where: {

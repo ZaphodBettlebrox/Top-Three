@@ -27,7 +27,12 @@ $(document).ready(function () {
     $('.carousel').carousel();
 
     $('.ListID').on("click", function () {
-        
+        $.ajax("/profile/delete/:id"), {
+            type: "delete",
+            data: {
+                id: require.session.user.id
+            }
+        }
     })
     
 
