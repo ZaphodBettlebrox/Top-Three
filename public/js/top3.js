@@ -25,4 +25,9 @@ $(document).ready(function () {
         console.log("hi");
     });
     $('.carousel').carousel();
+
+    $('.')
+    
+
+
 });
