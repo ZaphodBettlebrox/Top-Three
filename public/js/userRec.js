@@ -27,23 +27,45 @@ $(document).ready(function () {
     if (categoryImage != null && allUserData != null) {
         //for loop to append all the data in allUserData array
         allUserData.forEach(data => {
-            const displayUsers = $(`<div class="catContainer col s12"><div class="displayUserinfo" value="${data.id}"><div class="userinfobox"><h4 id="${data.User.username}">${data.User.username}</h4><img class="responsive_img allUserImg" src="${data.User.profileurl}" alt=""></div>`)
+            const displayUsers = $(`
+            
+            <div class="catContainer col s12">
+            
+            <div class="displayUserinfo" value="${data.id}">
+            
+            <div class="userinfobox">
+            
+            <h4 id="${data.User.username}">
+            ${data.User.username}</h4>
+
+            <img class="responsive_img allUserImg" src="${data.User.profileurl}" alt="">
+            </div>`)
+
+
+            
             $(".userRecContainer").append(displayUsers)
-            const catImg = (`<h4 class="centered" id="${data.category}">${data.category}</h4><img class="chosenimg" src = "${categoryImage}">
-            </div></div>`)
+            const catImg = (`
+            <h4 class="centered" id="${data.category}">${data.category}
+            </h4>
+
+
+            <img class="chosenimg" src = "${categoryImage}">
+            </div>
+
+            </div>`)
             $(".userinfobox").append(catImg)
         })
     }
 
 
-    $(".displayUserinfo").on("click", event => {
+    $(this).on("click", event => {
         let userName 
         let userImg
         let listId
         
         
 
-        console.log(event.target.value)
+        console.log(event)
     })
 
 
