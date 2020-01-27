@@ -35,33 +35,24 @@ $(document).ready(function () {
     });
 });
 
-// entry page slide
-// var slideIndex = 0;
-// slideshow();
 
-// function slideshow() {
-//     var i;
-//     var x = document.getElementsByClassName("favSlides");
-//     for (i = 0; i < x.length; i++) {
-//         x[i].style.display = "none";
-//     }
-//     slideIndex++;
-//     if (slideIndex > x.length) { slideIndex = 1 }
-//     x[slideIndex - 1].style.display = "block";
-//     setTimeout(slideshow, 5000);
-// };
 
-// //entry page text change
-// var text = ["Explore", "Search", "Seek"];
-// var counter = 0;
-// var elem = document.getElementById("changeText");
-// var inst = setInterval(change, 9000);
+//Get the button:
+mybutton = document.getElementById("myBtn");
 
-// function change() {
-//     elem.innerHTML = text[counter];
-//     counter++;
-//     if (counter >= text.length) {
-//         counter = 0;
-//         // clearInterval(inst);
-//     }
-// }
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
