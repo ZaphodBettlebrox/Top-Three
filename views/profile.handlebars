@@ -14,7 +14,7 @@
         <li><a href="mobile.html">Mobile</a></li>
     </ul>
 
-       {{!------------ moving images here, copy across pages: --}}
+    {{!------------ moving images here, copy across pages: --}}
     {{!-- <div>
         <img src="/images/curve1.png" alt="shape1" class="curve1">
         <img src="/images/curve2.png" alt="shape2" class="curve2">
@@ -23,20 +23,19 @@
     </div> --}}
     {{!----------- end here --}}
 
-    <div class="row right-align">
-        <button id="upload_widget" class="cloudinary-button">Change Profile Picture</button>
-    </div>
+
 
     {{!-- getting validation on code for what for --}}
-    
+
 
 
     <div class="row center-align">
 
-    <img src="{{User.profileurl}}" alt="profile picture" class="profile_image">
-    <h4>Logged in as: {{User.firstname}} {{User.lastname}}</h4>
-    <h4>Bio:</h4>
-    <h5>{{User.bio}}</h5>
+        <img src="{{User.profileurl}}" alt="profile picture" class="profile_image">
+        <button id="upload_widget" class="cloudinary-button">Change Profile Picture</button>
+        <h4>Logged in as: {{User.firstname}} {{User.lastname}}</h4>
+        <h4>Bio:</h4>
+        <h5>{{User.bio}}</h5>
     </div>
 
 
@@ -51,13 +50,13 @@
                 </div>
 
                 {{#each Recos}}
-                    <div class="carousel-item  white-text" href="#one!">
-                        <h2>cat: {{this.category}}</h2>
-                        <h2>body: {{this.body}}</h2>
-                        <a href="#"><img src="{{this.rec_img}}"></a>
-                    </div>
+                <div class="carousel-item  white-text" href="#one!">
+                    <h2>cat: {{this.category}}</h2>
+                    <h2>body: {{this.body}}</h2>
+                    <a href="#"><img src="{{this.rec_img}}"></a>
+                </div>
                 {{/each}}
-    {{!-- 
+                {{!-- 
 
                 <div class="carousel-item  white-text" href="#two!">
                     <h2>Your Recommendations</h2>
