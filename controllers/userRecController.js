@@ -28,7 +28,7 @@ router.get("/grablistproduct/:id", function (req,res) {
     where:{
       id: req.params.id,
     },
-    include:[{model:db.UserRec, include: [{model: db.Product}]}],
+    include:[{model:db.UserRec, include:[{model: db.Product}]}],
   }).then(function (dbList) {
     res.json(dbList);
   });
