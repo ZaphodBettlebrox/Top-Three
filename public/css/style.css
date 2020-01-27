@@ -5,6 +5,7 @@
 .fixed-row-bottom {
   position: fixed;
   bottom: 0;
+  z-index: 2;
 }
 
 .footer {
@@ -14,6 +15,16 @@
   margin: 0;
   text-align: center;
 }
+
+.sidenav{
+  /* z-index: 2; */
+  background: rgb(29, 28, 28);
+}
+
+a{
+  color: whitesmoke !important;
+}
+
 
 .copyright {
   color: white;
@@ -30,7 +41,9 @@ body {
 }
 
 .gradient-header {
-  background: rgb(29, 28, 28)
+  background: rgb(29, 28, 28);
+  z-index: 2;
+
 }
 
 .signin {
@@ -62,6 +75,10 @@ body {
   margin: 5px;
 
 
+}
+
+.indicators{
+  z-index: 1;
 }
 
 .category{
@@ -170,7 +187,7 @@ body {
 }
 
 .signup-form {
-  background-color: rgba(43, 42, 42, 0.644);
+  background-color: rgba(31, 30, 30, 0.644);
   margin-left: 8%;
   margin-right: 8%;
   border-radius: 15px;
@@ -206,12 +223,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  background-color: rgba(43, 42, 42, 0.644);
+  background-color: rgba(31, 30, 30, 0.644);
 
 }
 
 .userinfobox {
-  background-color: rgba(43, 42, 42, 0.644);
+  background-color: rgba(31, 30, 30, 0.644);
   height: 100%;
   position: relative;
 
@@ -219,6 +236,11 @@ body {
 
 .allUserImg {
   width: 30%;
+  height: auto;
+}
+
+.aUserImg{
+  width: 20%;
   height: auto;
 }
 
@@ -240,18 +262,20 @@ body {
 
 
 .userreccarousel{
-    height: 70vh !important;
-    margin-top:10vh;
+    height: 50vh !important;
+    margin-top: 10px;
     border-radius: 30px;
-    background-color: rgba(49, 48, 48, 0.733) !important;
+    background-color: rgba(31, 30, 30, 0.644) !important;
+    margin-bottom: 10%;
 
 }
 
 /* transparanet box */
 .createrecbox {
   height: 60vh;
-  background-color: rgba(66, 63, 63, 0.644);
+  background-color: rgba(31, 30, 30, 0.644);
 }
+
 
 .name{
   margin-left: 3vw;
@@ -260,6 +284,7 @@ body {
 .profile-box{
   padding-top: 3vh;
 }
+
 
 @media screen and (max-width: 600px) {
   .column {

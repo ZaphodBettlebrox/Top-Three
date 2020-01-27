@@ -35,7 +35,7 @@ $(document).ready(function () {
             <div class="userhandle">
             <h4 id="${data.User.username}">${data.User.username}</h4>
             <img class="responsive_img allUserImg" src="${data.User.profileurl}" alt="">
-            <button class="viewRec" value="${data.id}">View ${data.User.username}'s Recommendation</button>
+            <button class="viewRec" value="${data.id}">View Recommendation</button>
             </div>
             <div class="userinfobox">
             <img class="chosenimg" src = "${categoryImage}"></div>
@@ -80,24 +80,24 @@ $(document).ready(function () {
 
         const displayUserRec = `<div class="carousel-item white-text" href="#one!">
             <div id="userproductone">
-                <h2 id="productonetitle">${indUser.UserRecs[0].Product.p_name}</h2>
-                <p id="productonedes" class="white-text c">${indUser.UserRecs[0].body}</p>
+                <h2 id="productonetitle">Product One: ${indUser.UserRecs[0].Product.p_name}</h2>
+                <p id="productonedes" class="white-text c">Description: ${indUser.UserRecs[0].body}</p>
             </div>
             <img class="responsive-img userimgbox" src="${indUser.UserRecs[0].rec_img}">
             </img>
         </div>
         <div class="carousel-item white-text" href="#two!">
             <div id="userproducttwo">
-                <h2 id="producttwotitle">${indUser.UserRecs[1].Product.p_name}</h2>
-                <p id="producttwodesc" class="white-text ">${indUser.UserRecs[1].body}</p>
+                <h2 id="producttwotitle">Product Two: ${indUser.UserRecs[1].Product.p_name}</h2>
+                <p id="producttwodesc" class="white-text ">Description: ${indUser.UserRecs[1].body}</p>
             </div>
             <img class="responsive-img userimgbox" src="${indUser.UserRecs[1].rec_img}">
             </img>
         </div>
         <div class="carousel-item white-text" href="#three!">
             <div id="userproductthree">
-                <h2 id="productthreetitle">${indUser.UserRecs[2].Product.p_name}</h2>
-                <p id="productthreedesc" class="white-text">${indUser.UserRecs[2].body}</p>
+                <h2 id="productthreetitle">Product Three: ${indUser.UserRecs[2].Product.p_name}</h2>
+                <p id="productthreedesc" class="white-text">Description: ${indUser.UserRecs[2].body}</p>
             </div>
             <img class="responsive-img userimgbox" src="${indUser.UserRecs[2].rec_img}">
             </img>
@@ -105,8 +105,8 @@ $(document).ready(function () {
         $(".userreccarousel").append(displayUserRec)
 
         const displayUserHandle = `<div id="userinfo">
-        <p id="userN">${userN}</p>
-        <img class="allUserImg" src="${profUrl}" alt="">
+        <h4 id="userN">Username: ${userN}</h4>
+        <img class="aUserImg" src="${profUrl}" alt="">
        
     </div>`
 
