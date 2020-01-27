@@ -58,19 +58,44 @@ router.get("/", function (req, res) {
 
             // the below is needed because findAll creates a list with an additional dictionary inside of it.
             // Therefore a for loop was needed to pull out the deeper array.
-            recData = recData.map(e=>{
+            recData = recData.map((e,i)=>{
+                let caroCount ={
+                    0: "one",
+                    1: "two",
+                    2: "three",
+                    3: "four",
+                    4: "five",
+                    5: "six",
+                    6: "seven",
+                    7: "eight",
+                    8: "nine",
+                    9: "ten",
+                    10: "eleven",
+                    11: "twelve",
+                    12: "thirteen",
+                    13: "fourteen",
+                    14: "fifteen",
+                    15: "sixteen",
+                    16: "seventeen",
+                    17: "eighteen",
+                    18: "nineteen",
+                    19: "twenty"
+                };
                 return {
                     rec_img: e.rec_img,
                     body : e.body,
                     category : e["List.category"],
-                    ListId: e.ListId
+                    ListId: e.ListId,
+                    caroselNumString:caroCount[i]
                 }
             }) 
-            
+
+
                     var hbsObject = {
                         User: userData,
                         Recos: recData
                     };
+                    // res.json(hbsObject)
                     res.render("profile", hbsObject);
         })
 
@@ -120,7 +145,7 @@ router.post("/setprofileurl", function (req, res) {
 
 
 //route to delete your account
-router.delete("/delete", function (req, res){
+router.delete("/delete/:id", function (req, res){
     db.User.destroy(
     {
         where: {

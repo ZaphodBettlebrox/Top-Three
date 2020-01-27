@@ -274,7 +274,7 @@ body {
 
 .name{
   margin-left: 3vw;
-  font-size: 4vh;
+  font-size: 2vw;
 }
 .profile-box{
   padding-top: 3vh;
@@ -283,12 +283,22 @@ body {
 .test{
   margin-bottom: 20%;
 }
+.colored-button{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgb(5, 159, 197);
+  border-radius: 15px;
+  border: none;
+}
+.colored-button:hover {
+  background-color: rgb(9, 78, 180);
+  color: white;
+}
 
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+.button-hover:hover{
+ background: rgb(49, 49, 49);
 }
 
 /* right top */
@@ -298,7 +308,7 @@ body {
   top: -4vh;
   right: -2vw;
   width: 30%;
-  filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
+  filter: drop-shadow(-10px 10px 15px rgb(122, 26, 134));
   animation-name: curve1-ani;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -312,7 +322,7 @@ body {
   top: -5vh;
   left: -3vw;
   width: 25%;
-  filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
+  filter: drop-shadow(-10px 10px 15px rgb(47, 30, 143));
   animation-name: curve4-ani;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -328,7 +338,7 @@ body {
   bottom: -25vh;
   right: -1vw;
   width: 110vw;
-  filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
+  filter: drop-shadow(-10px 10px 15px rgb(22, 4, 126));
   animation-name: curve2-ani;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -343,7 +353,7 @@ body {
   bottom: -30vh;
   left: -7vw;
   width: 150vw;
-  filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
+  filter: drop-shadow(-10px 10px 15px rgb(66, 15, 124));
   transform: rotate(3deg);
   animation-name: curve3-ani;
   animation-duration: 4s;
@@ -473,3 +483,29 @@ body {
   font-size: large;
   margin: -20px;
   margin-left: 3px;
+  100% {
+    top: -5vh;
+    left: -3vw;
+  }
+}
+@media screen and (max-width: 800px){
+  .curve1{
+    width: 40vw;
+  }
+  .curve4{
+    width: 30vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px){
+  .curve1{
+    width: 50vw;
+  }
+  .curve4{
+    width: 40vw;
+  }
+}
