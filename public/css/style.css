@@ -10,14 +10,16 @@
 .footer {
   background: rgb(29, 28, 28);
   width: 100vw;
-  height: 5vh;
+  height: 7vh;
   margin: 0;
   text-align: center;
 }
 
 .copyright {
   color: white;
-  padding: 2vh;
+  padding-top: 3vh;
+  font-size: 1.2vh;
+
 }
 
 body {
@@ -153,6 +155,10 @@ body {
   color: white;
 }
 
+.submit-button{
+  margin-top: 3vh;
+}
+
 .signin-logo {
   width: 10vw;
   margin-top: 5vh;
@@ -164,6 +170,8 @@ body {
   margin-right: 8%;
   border-radius: 15px;
   margin-top: 5%;
+  margin-bottom: 10vh;
+  padding-bottom: 4vh;
 }
 
 .userRecContainer {
@@ -239,7 +247,10 @@ body {
   background-color: rgba(66, 63, 63, 0.644);
 }
 
-
+.name{
+  margin-left: 3vw;
+  font-size: 4vh;
+}
 
 @media screen and (max-width: 600px) {
   .column {
