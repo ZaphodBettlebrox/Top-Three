@@ -41,6 +41,9 @@
                 <div class="carousel-fixed-item center" id="carouselFixed">
                 </div>
 
+                {{!-- the href here needs to increment... but with a string #"one"!
+                    #"two"! --}}
+                    {{!-- let's just add an array of values that go from one to ten and call it good --}}
                 {{#each Recos}}
                 <div class="carousel-item  white-text" href="#one!">
                     <button id="{{this.ListId}}"> Delete recommendation </button>

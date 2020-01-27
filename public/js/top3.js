@@ -26,7 +26,9 @@ $(document).ready(function () {
     });
     $('.carousel').carousel();
 
-    $('.')
+    $('.ListID').on("click", function () {
+        
+    })
     
 
 
