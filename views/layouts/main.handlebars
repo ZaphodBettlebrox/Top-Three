@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link rel="icon" href="/images/favicon.ico">
 
     <title>Top 3</title>
 
@@ -20,6 +21,7 @@
     <div class="row">
         <nav>
             <div class="nav-wrapper gradient-header">
+                <a href="https://top3recommendations.herokuapp.com/entrypage" class="name">Top 3</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="https://top3recommendations.herokuapp.com/profile">Profile</a></li>
@@ -33,6 +35,16 @@
                 </ul>
             </div>
         </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="https://top3recommendations.herokuapp.com/profile">Profile</a></li>
+            <li><a href="https://top3recommendations.herokuapp.com/entrypage">Explore</a></li>
+            <li><a href="https://top3recommendations.herokuapp.com/rec/newrec">Create Rec</a></li>
+            <li><a href="https://top3recommendations.herokuapp.com/login/logout">Sign out</a></li>
+            <li><a href="http://localhost:8080/profile"> test Profile</a></li>
+            <li><a href="http://localhost:8080/entrypage">test Explore</a></li>
+            <li><a href="http://localhost:8080/rec/newrec">test Create Rec</a></li>
+            <li><a href="http://localhost:8080/login/logout">test Sign out</a></li>
+        </ul>
     </div>
     {{{ body }}}
 
