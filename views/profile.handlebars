@@ -45,16 +45,16 @@
         </div>
 
         <div class="col s8">
-            <div class="carousel carousel-slider center">
-                <div class="carousel-fixed-item center">
+            <div class="carousel carousel-slider center" id="carouselSlider">
+                <div class="carousel-fixed-item center" id="carouselFixed">
                 </div>
 
                 {{#each Recos}}
                 <div class="carousel-item  white-text" href="#one!">
+                    <button id ="{{this.ListId}}"> Delete recommendation </button>
                     <h2>Category: {{this.category}}</h2>
                     <h2>Description: {{this.body}}</h2>
                     <a href="#"><img src="{{this.rec_img}}"></a>
-                    <button id ="{{this.ListId}}"> Delete recommendation </button>
                 </div>
                 {{/each}}
 
@@ -96,7 +96,7 @@
             </div>
         </div>
         <div>
-            <button id ="{{this.UserId}}"> Delete recommendation </button>
+            <button id ="{{this.UserId}}"> Delete profile! </button>
         </div>
 
 
