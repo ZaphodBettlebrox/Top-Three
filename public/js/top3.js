@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $("#upload_widget").on("click", function () {
         var myWidget = cloudinary.createUploadWidget({
@@ -24,7 +25,20 @@ $(document).ready(function () {
         myWidget.open();
         console.log("hi");
     });
-    $('.carousel').carousel();
+
+ 
+    // $('.carousel').carousel();
+
+    $('.ListID').on("click", function () {
+        $.ajax("/profile/delete/:id"), {
+            type: "delete",
+            data: {
+                id: require.session.user.id
+            }
+        }
+    })
     
 
 });
+
+
