@@ -1,0 +1,43 @@
+<div class="container-fluid">
+
+
+    {{!------------ moving images here, copy across pages: --}}
+    <div>
+        <img src="/images/curve1.png" alt="shape1" class="curve1">
+        <img src="/images/curve2.png" alt="shape2" class="curve2">
+        <img src="/images/curve3.png" alt="shape3" class="curve3">
+        <img src="/images/curve4.png" alt="shape4" class="curve4">
+    </div>
+    {{!----------- end here --}}
+
+
+
+    <div class="row center-align signup-form">
+        <div class="col s3">
+        </div>
+        <div class="col s6">
+
+            <div class="row center-align">
+                <img src="/images/hand.png" alt="website logo" class="signin-logo">
+            </div>
+
+            <h2>Login Page</h2>
+
+            <form action="/login/entrypage" method="POST">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="password">
+                <input type="submit" value="Go Go go!">
+            </form>
+            
+            <br>
+
+            <a href="/login/createAccount" class="login-form">First time? sign up here!</a>
+
+        </div>
+        <div class="col s3">
+
+        </div>
+    </div>
+
+
+</div>
