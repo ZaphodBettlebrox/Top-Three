@@ -164,6 +164,11 @@ body {
   margin-top: 5vh;
 }
 
+.cloudinary-button{
+
+  font-size: 2px;
+}
+
 .signup-form {
   background-color: rgba(43, 42, 42, 0.644);
   margin-left: 8%;
@@ -251,6 +256,9 @@ body {
   margin-left: 3vw;
   font-size: 4vh;
 }
+.profile-box{
+  padding-top: 3vh;
+}
 
 @media screen and (max-width: 600px) {
   .column {
@@ -267,7 +275,7 @@ body {
   width: 30%;
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   animation-name: curve1-ani;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -281,7 +289,7 @@ body {
   width: 25%;
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   animation-name: curve4-ani;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-delay: .7s;
@@ -297,7 +305,7 @@ body {
   width: 110vw;
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   animation-name: curve2-ani;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-delay: 0.5s;
@@ -313,7 +321,7 @@ body {
   filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
   transform: rotate(3deg);
   animation-name: curve3-ani;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-delay: .2s;
