@@ -290,6 +290,23 @@ body {
 .test{
   margin-bottom: 20%;
 }
+.colored-button{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgb(5, 159, 197);
+  border-radius: 15px;
+  border: none;
+}
+.colored-button:hover {
+  background-color: rgb(9, 78, 180);
+  color: white;
+}
+
+.button-hover:hover{
+ background: rgb(49, 49, 49);
+}
 
 /* right top */
 .curve1 {
