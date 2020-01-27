@@ -301,7 +301,7 @@ body {
   top: -4vh;
   right: -2vw;
   width: 30%;
-  filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
+  filter: drop-shadow(-10px 10px 15px rgb(78, 2, 88));
   animation-name: curve1-ani;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -315,7 +315,7 @@ body {
   top: -5vh;
   left: -3vw;
   width: 25%;
-  filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
+  filter: drop-shadow(-10px 10px 15px rgb(26, 4, 150));
   animation-name: curve4-ani;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -331,7 +331,7 @@ body {
   bottom: -25vh;
   right: -1vw;
   width: 110vw;
-  filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
+  filter: drop-shadow(-10px 10px 15px rgb(26, 4, 150));
   animation-name: curve2-ani;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -346,7 +346,7 @@ body {
   bottom: -30vh;
   left: -7vw;
   width: 150vw;
-  filter: drop-shadow(-10px 10px 15px rgb(23, 5, 126));
+  filter: drop-shadow(-10px 10px 15px rgb(26, 4, 150));
   transform: rotate(3deg);
   animation-name: curve3-ani;
   animation-duration: 4s;
