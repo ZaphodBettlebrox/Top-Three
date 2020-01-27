@@ -264,7 +264,7 @@ body {
 
 
 .userreccarousel{
-    /* height: 50vh !important; */
+    height: 70vh !important;
     margin-top: 10px;
     border-radius: 30px;
     background-color: rgba(31, 30, 30, 0.644) !important;
