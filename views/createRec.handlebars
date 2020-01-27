@@ -1,21 +1,21 @@
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
 
+<div class="center padded">
 <div class="row center-align">
-    <img src="{{User.profileurl}}" alt="profile picture" class="profile_image">
+    <img src="/images/hand.png" alt="website logo" class="signin-logo">
     <h4>{{User.firstname}} {{User.lastname}}</h4>
 </div>
 
-
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col s12 container createrecbox">
-            <h1 class="center">
+        <div class ="bottom" class="col s12 containerRec createrecbox">
+            <h5  class="center">
                 Create Recommendation
-            </h1>
+            </h5 >
             <div class="row">
-                <div class="col s6">
-                    <div class="dropdown input-field">
+                <div class="col s12 containing">
+
+
+                    {{!-- DROPDOWN 1 --}}
+                    <div class="dropdown input-field recShade">
                         <select id="category-select">
                             <option value="">--------</option>
                             <option value="board&cardgames">Board Games</option>
@@ -29,119 +29,124 @@
                         <label>Select Category: </label>
                     </div>
                     <br>
-                    <div class="input-field col s12">
+
+
+                    {{!-- INPUT FIELD 1a --}}
+                    <div class="input-field recShade">
                         <select name="" id="product-one">
                             <option value="">--------</option>
                         </select>
                         <label>Select first product: </label>
                     </div>
-                </div>
-                <br>
-                <div class="input-field col s12">
-                    <div id="createProductOne">
-                        <br>
-                        <input type="text" id="comment-one" placeholder="Product description">
-                    </div>
-                </div>
-                <br>
-            </div>
-        </div>
-        <div class="col s6">
-
-            <button id="upload_widget_zero" class="cloudinary-button" id="widgetZero">Upload files</button>
-            <script type="text/javascript">
-                var recUrl;
-                var myWidget0 = cloudinary.createUploadWidget({
-                    cloudName: 'top3project',
-                    uploadPreset: 'yb5bx9uo'
-                }, (error, result) => {
-                    if (!error && result && result.event === "success") {
-                        console.log('Done! Here is the image info: ', result.info);
-                        alert("image0 uploaded");
-                        recUrl = result.info.url
-                    }
-                })
-                document.getElementById("upload_widget_zero").addEventListener("click", function () {
-                    myWidget0.open();
-                }, false);
-            </script>
-
-            <div class="input-field">
-                <select name="" id="product-two">
-                    <option value="">--------</option>
-                </select>
-                <label>Select second product: </label>
-            </div>
-            <br>
-            <div class="input-field">
-                <div id="createProductTwo">
                     <br>
-                    <input type="text" id="comment-two" placeholder="Product description">
+
+                    {{!-- INPUT FIELD 1b --}}
+                    <div class="input-field recShade">
+                        <div id="createProductOne">
+                            <input type="text" id="comment-one" placeholder="enter product description">
+                        </div>
+                    </div>
+                    <br>
+
+                    {{!-- UPLOAD BUTTON 1 & SCRIPT--}}
+                    <button id="upload_widget_zero" class="cloudinary-button" id="widgetZero">Upload files</button>
+                    <script type="text/javascript">
+                        var recUrl;
+                        var myWidget0 = cloudinary.createUploadWidget({
+                            cloudName: 'top3project',
+                            uploadPreset: 'yb5bx9uo'
+                        }, (error, result) => {
+                            if (!error && result && result.event === "success") {
+                                console.log('Done! Here is the image info: ', result.info);
+                                alert("image0 uploaded");
+                                recUrl = result.info.url
+                            }
+                        })
+                        document.getElementById("upload_widget_zero").addEventListener("click", function () {
+                            myWidget0.open();
+                        }, false);
+                    </script>
+                    <br>
+                    <hr>
+                    <br>
+
+                    {{!-- INPUT FIELD 2a --}}
+                    <div class="input-field recShade">
+                        <select name="" id="product-two">
+                            <option value="">--------</option>
+                        </select>
+                        <label>Select second product: </label>
+                    </div>
+                    <br>
+
+                    {{!-- INPUT FIELD 2b --}}
+                    <div class="input-field recShade">
+                        <div id="createProductTwo">
+                            <input type="text" id="comment-two" placeholder="enter product description">
+                        </div>
+                    </div>
+
+                    {{!-- UPLOAD BUTTON 2 & SCRIPT--}}
+                    <button id="upload_widget_one" class="cloudinary-button" id="widgetOne">Upload files</button>
+                    <script type="text/javascript">
+                        var recUrl1;
+                        var myWidget1 = cloudinary.createUploadWidget({
+                            cloudName: 'top3project',
+                            uploadPreset: 'yb5bx9uo'
+                        }, (error, result) => {
+                            if (!error && result && result.event === "success") {
+                                console.log('Done! Here is the image info: ', result.info);
+                                alert("image1 uploaded");
+                                recUrl1 = result.info.url
+                            }
+                        })
+                        document.getElementById("upload_widget_one").addEventListener("click", function () {
+                            myWidget1.open();
+                        }, false);
+                    </script>
+                    <br>
+                    <hr>
+                    <br>
+
+                    {{!-- INPUT FIELD 3a--}}
+                    <div class="input-field recShade">
+                        <select name="" id="product-three">
+                            <option value="">--------</option>
+                        </select>
+                        <label>Select third product: </label>
+                    </div>
+                    <br>
+
+                    {{!-- INPUT FIELD --}}
+                    <div class="input-field recShade">
+                        <div id="createProductThree">
+                            <input type="text" id="comment-three" placeholder="enter product description">
+                        </div>
+                    </div>
+
+                    {{!-- UPLOAD BUTTON 3 & SCRIPT--}}
+                    <button id="upload_widget_two" class="cloudinary-button" id="widgetTwo">Upload files</button>
+                    <script type="text/javascript">
+                        var recUrl2;
+                        var myWidget2 = cloudinary.createUploadWidget({
+                            cloudName: 'top3project',
+                            uploadPreset: 'yb5bx9uo'
+                        }, (error, result) => {
+                            if (!error && result && result.event === "success") {
+                                console.log('Done! Here is the image info: ', result.info);
+                                alert("image2 uploaded");
+                                recUrl2 = result.info.url
+                            }
+                        })
+                        document.getElementById("upload_widget_two").addEventListener("click", function () {
+                            myWidget2.open();
+                        }, false);
+                    </script>
+                    <br>
+                    <hr>
+                    {{!-- DONE BUTTON --}}
+                    <button id="recDone" type="submit">Done</button>
                 </div>
             </div>
-            <button id="upload_widget_one" class="cloudinary-button" id="widgetOne">Upload files</button>
-            <script type="text/javascript">
-                var recUrl1;
-                var myWidget1 = cloudinary.createUploadWidget({
-                    cloudName: 'top3project',
-                    uploadPreset: 'yb5bx9uo'
-                }, (error, result) => {
-                    if (!error && result && result.event === "success") {
-                        console.log('Done! Here is the image info: ', result.info);
-                        alert("image1 uploaded");
-                        recUrl1 = result.info.url
-                    }
-                })
-                document.getElementById("upload_widget_one").addEventListener("click", function () {
-                    myWidget1.open();
-                }, false);
-            </script>
-            <br>
-
-            <div class="input-field">
-                <select name="" id="product-three">
-                    <option value="">--------</option>
-                </select>
-                <label>Select third product: </label>
-            </div>
-            <br>
-        </div>
-
-        <div class="input-field col s6">
-            <div id="createProductThree">
-                <br>
-                <input type="text" id="comment-three" placeholder="Product description">
-            </div>
-        </div>
-        <button id="upload_widget_two" class="cloudinary-button" id="widgetTwo">Upload files</button>
-        <script type="text/javascript">
-            var recUrl2;
-            var myWidget2 = cloudinary.createUploadWidget({
-                cloudName: 'top3project',
-                uploadPreset: 'yb5bx9uo'
-            }, (error, result) => {
-                if (!error && result && result.event === "success") {
-                    console.log('Done! Here is the image info: ', result.info);
-                    alert("image2 uploaded");
-                    recUrl2 = result.info.url
-                }
-            }
-            )
-            document.getElementById("upload_widget_two").addEventListener("click", function () {
-                myWidget2.open();
-            }, false);
-        </script>
-        <br>
-        </button>
-    </div>
-</div>
-<button id="recDone" type="submit">Done</button>
-</div>
-</div>
-</div>
-</div>
-
-
-{{!-- ROW END --}}
-</div>
+        </div class ="bottom-margin bottom">
 </div>

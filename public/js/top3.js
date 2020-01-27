@@ -1,13 +1,4 @@
 $(document).ready(function () {
-    $('.carousel').carousel();
-    // $('.carousel.carousel-slider').carousel({
-    //     fullWidth: true,
-    //     indicators: true
-    //   });
-});
-
-
-$(document).ready(function () {
     $("#upload_widget").on("click", function () {
         var myWidget = cloudinary.createUploadWidget({
             cloudName: 'top3project',
@@ -33,8 +24,8 @@ $(document).ready(function () {
         myWidget.open();
         console.log("hi");
     });
+    $('.carousel').carousel();
 });
-
 
 
 //Get the button:
