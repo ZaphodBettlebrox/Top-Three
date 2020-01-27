@@ -10,7 +10,7 @@
 .footer {
   background: rgb(29, 28, 28);
   width: 100vw;
-  height: 10vh;
+  height: 5vh;
   margin: 0;
   text-align: center;
 }
@@ -213,7 +213,7 @@ body {
   width: 100%;
 }
 
-/* .userimgbox{
+.userimgbox{
     margin-top: 50px;
     height: 30vh;
     width: 42vh;
@@ -222,17 +222,16 @@ body {
 .image{
     width:100%;
     height:100%;
-   
 }
 
 
 .userreccarousel{
-    height: 80vh !important;
+    height: 70vh !important;
     margin-top:10vh;
     border-radius: 30px;
     background-color: rgba(49, 48, 48, 0.733) !important;
 
-} */
+}
 
 /* transparanet box */
 .createrecbox {
