@@ -34,9 +34,9 @@ router.get("/userRec", function (req, res) {
 });
 
 //render viewUserRec html
-router.get("/alluserRec", function (req, res) {
+router.get("/allUserRec", function (req, res) {
     if (req.session.user) {
-        res.render("alluserRec", req.session.user);
+        res.render("allUserRec", req.session.user);
     } else {
         res.render("login");
     }
