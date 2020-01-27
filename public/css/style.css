@@ -36,7 +36,7 @@ a{
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-  background: linear-gradient(to right, rgb(52, 199, 240), rgb(116, 223, 139), rgb(133, 5, 133));
+  background: linear-gradient(to right, rgb(125, 208, 231), rgb(175, 235, 188), rgb(143, 84, 143));
   height: 100vh;
 }
 
@@ -285,6 +285,10 @@ body {
 }
 .profile-box{
   padding-top: 3vh;
+}
+
+.test{
+  margin-bottom: 20%;
 }
 
 
