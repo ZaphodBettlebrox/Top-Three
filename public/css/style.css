@@ -1,3 +1,7 @@
+/* * {
+  border: solid black 1px;
+} */
+
 .row {
   margin: 0;
 }
@@ -73,8 +77,6 @@ body {
   overflow: hidden;
   height: 700px;
   margin: 5px;
-
-
 }
 
 .indicators{
@@ -83,13 +85,14 @@ body {
 
 .category{
   width: 100%;
-  height: 100%;
+  height: auto;
+  padding: -200px;
 }
 
 .catContainerheader{
   position: relative;
   overflow: hidden;
-  height: 500px;
+  /* height: 500px; */
 }
 
 .centered {
@@ -118,16 +121,6 @@ body {
 
 .fancy {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.backed {
-  background-image: url(https://res.cloudinary.com/tyson/image/upload/v1580066812/recbar_bwugxa.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-size: cover;
-  background-position: center;
-  border: 2px solid black;
-  opacity: 0.6;
 }
 
 .list {
@@ -290,6 +283,23 @@ body {
 .test{
   margin-bottom: 20%;
 }
+.colored-button{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgb(5, 159, 197);
+  border-radius: 15px;
+  border: none;
+}
+.colored-button:hover {
+  background-color: rgb(9, 78, 180);
+  color: white;
+}
+
+.button-hover:hover{
+ background: rgb(49, 49, 49);
+}
 
 /* right top */
 .curve1 {
@@ -407,17 +417,72 @@ body {
 }
 
 /* left top */
-@keyframes curve4-ani {
-  0% {
-    top: -5vh;
-    left: -3vw;
-  }
+@keyframes curve4-ani{
+    0% {
+         top: -5vh;
+        left: -3vw;
+    }
+    50% {
+         top: -4.5vh;
+        left: -3.5vw;
+    }
+    100% {
+         top: -5vh;
+        left: -3vw;
+    }
+}
 
-  50% {
-    top: -4.5vh;
-    left: -3.5vw;
-  }
+/* entry page to-top button */
+#myBtn {
+  display: none;
+  position: fixed; 
+  bottom: 20px;
+  right: 30px; 
+  z-index: 99; 
+  border: none;
+  outline: none;
+  background-color: purple;
+  color: white;
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 10px; 
+  font-size: 18px;
+}
 
+#myBtn:hover {
+  background-color: #555;
+}
+
+.bottom {
+  padding-bottom: 10%;
+}
+
+#recDone {
+  background-color: limegreen;
+  color: bisque;
+  border-radius: 10px; 
+  font-size: 18px;
+}
+
+.containerRec {
+  text-align: center
+}
+
+.recShade {
+  background-color: rgba(31, 30, 30, 0.644);
+}
+
+.padded {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* label color */
+.input-field label {
+  color: rgb(0, 0, 0);
+  font-size: large;
+  margin: -20px;
+  margin-left: 3px;
   100% {
     top: -5vh;
     left: -3vw;
