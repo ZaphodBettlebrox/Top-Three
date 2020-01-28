@@ -75,7 +75,7 @@ body {
 .catContainer {
   position: relative;
   overflow: hidden;
-  height: 700px;
+  height: 500px;
   margin: 5px;
 }
 
@@ -85,14 +85,13 @@ body {
 
 .category{
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: -200px;
 }
 
 .catContainerheader{
   position: relative;
   overflow: hidden;
-  /* height: 500px; */
 }
 
 .centered {
@@ -526,5 +525,14 @@ body {
   .curve4{
     width: 40vw;
   }
+}
+
+
+/*resize  */
+@media screen and (max-width: 800px){
+  .catContainer{
+    /* height:300px; */
+  }
+
 }
 
