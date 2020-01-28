@@ -84,6 +84,7 @@ router.get("/", function (req, res) {
                 return {
                     rec_img: e.rec_img,
                     body : e.body,
+                    id : e.id,
                     category : e["List.category"],
                     ListId: e.ListId,
                     caroselNumString:caroCount[i]
@@ -144,21 +145,40 @@ router.post("/setprofileurl", function (req, res) {
 
 
 
-//route to delete your account
-router.delete("/delete/:id", function (req, res){
-    db.User.destroy(
+//route to delete your rec
+router.post("/delete", function (req, res){
+    console.log("gothere to delete");
+    console.log(req.body);
+    db.UserRec.destroy(
     {
         where: {
-        id: req.session.user.id
+        id: Number(req.body.id)
         }
     }
     ).then (function (Userdb){
-    console.log("User removed" + Userdb)
+    console.log("rec removed")
     res.redirect("/")
 
     })
 });
 
+
+
+// router.post("/delete", function (req, res){
+//     console.log("gothere to deletePOST");
+//     console.log(req.params);
+//     db.User.destroy(
+//     {
+//         where: {
+//         id: req.params.id
+//         }
+//     }
+//     ).then (function (Userdb){
+//     console.log("rec removed")
+//     res.redirect("/")
+
+//     })
+// });
 //route account to view user's recommendation
 
 
