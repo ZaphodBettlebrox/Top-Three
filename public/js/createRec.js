@@ -40,9 +40,11 @@ $(document).ready(function () {
         let test = event.target.value
         console.log(test)
         if (test === "Create Product") {
+            console.log("got here");
             let inputEl = $(`<input type="text" id="newProduct1" placeholder="Enter Product"><button id="btn1">Add Product</button>`)
-            $("#createProduct").prepend(inputEl)
+            $("#createProductOne").prepend(inputEl)
         }
+        console.log("made ito out");
 
         $("#btn1").on("click", event => {
             event.preventDefault();

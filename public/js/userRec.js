@@ -69,7 +69,8 @@ $(document).ready(function () {
 
     let indUser = JSON.parse(sessionStorage.getItem("indUser"))
 
-
+ console.log("indeUser - ", indUser);
+ 
     if (indUser != null) {
         // console.log(indUser)
         const userN = (indUser.User.username)
@@ -111,7 +112,7 @@ $(document).ready(function () {
     </div>`
 
     $(".userHandle").append(displayUserHandle)
-
+        $('.carousel').carousel();
 
     }
 
