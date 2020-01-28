@@ -477,16 +477,28 @@ body {
   padding-right: 10%;
 }
 
+.red-button{
+  margin-left: 5vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgb(235, 116, 126);
+  border-radius: 15px;
+  border: none;
+}
+.red-button:hover {
+  
+  background-color: rgb(180, 9, 9);
+  color: white;
+}
+
 /* label color */
 .input-field label {
   color: rgb(0, 0, 0);
   font-size: large;
   margin: -20px;
   margin-left: 3px;
-  100% {
-    top: -5vh;
-    left: -3vw;
-  }
 }
 @media screen and (max-width: 800px){
   .curve1{
