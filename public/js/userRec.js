@@ -32,10 +32,11 @@ $(document).ready(function () {
         allUserData.forEach(data => {
             const displayAllUsers =
                 $(`<div class="catContainer col s12 eachRec" >
-            <div class="userhandle">
+            <div class="userhandle center-align">
             <h4 id="${data.User.username}">${data.User.username}</h4>
             <img class="responsive_img allUserImg" src="${data.User.profileurl}" alt="">
-            <button class="viewRec" value="${data.id}">View Recommendation</button>
+            <br>
+            <button class="viewRec colored-button" value="${data.id}">View Recommendation</button>
             </div>
             <div class="userinfobox">
             <img class="chosenimg" src = "${categoryImage}"></div>
