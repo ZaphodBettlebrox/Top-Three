@@ -47,7 +47,7 @@
                     {{!-- let's just add an array of values that go from one to ten and call it good --}}
                 {{#each Recos}}
                 <div class="carousel-item  white-text" href="#{{caroselNumString}}!">
-                    <button id="{{this.ListId}}"> Delete recommendation </button>
+                    <button class="deleteBtn" id="{{this.id}}"> Delete recommendation </button>
                     <h2>Category: {{this.category}}</h2>
                     <h2>Description of Product: {{this.body}}</h2>
                     <a href="#"><img src="{{this.rec_img}}"></a>

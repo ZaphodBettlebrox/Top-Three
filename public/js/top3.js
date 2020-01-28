@@ -29,13 +29,15 @@ $(document).ready(function () {
 
     $('.carousel').carousel();
 
-    $('.ListID').on("click", function () {
-        $.ajax("/profile/delete/:id"), {
-            type: "delete",
+    $('.deleteBtn').on("click", function () {
+        console.log(this);
+        console.log(this.id);
+        $.ajax("/profile/delete", {
+            type: "POST",
             data: {
-                id: require.session.user.id
+                id: this.id
             }
-        }
+        })
     })
 
 
