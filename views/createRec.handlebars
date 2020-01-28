@@ -1,15 +1,23 @@
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
 
+   {{!------------ moving images here, copy across pages: --}}
+    <div>
+        <img src="/images/curve1.png" alt="shape1" class="curve1">
+        <img src="/images/curve4.png" alt="shape4" class="curve4">
+    </div>
+    {{!----------- end here--}}
+
 <div class="center padded">
 <div class="row center-align">
     <img src="/images/hand.png" alt="website logo" class="signin-logo">
     <h4>{{User.firstname}} {{User.lastname}}</h4>
 </div>
 
-        <div class ="bottom" class="col s12 containerRec createrecbox">
+        <div class ="bottom" class="col s12 containerRec container createrecbox">
             <h5  class="center">
                 Create Recommendation
             </h5 >
+            <br>
             <div class="row">
                 <div class="col s12 containing">
 
@@ -27,10 +35,12 @@
                             <option value="vacation">Vacation Spots</option>
                             <option value="books">Books</option>
                         </select>
-                        <label>Select Category: </label>
+                        <label>Select Category:</label>
                     </div>
-                    <br>
 
+                    <br>
+                    <div id="createProduct"></div>
+                    <br>
 
                     {{!-- INPUT FIELD 1a --}}
                     <div class="input-field recShade">
@@ -50,7 +60,7 @@
                     <br>
 
                     {{!-- UPLOAD BUTTON 1 & SCRIPT--}}
-                    <button id="upload_widget_zero" class="cloudinary-button" id="widgetZero">Upload files</button>
+                    <button id="upload_widget_zero" class="colored-button" id="widgetZero">Upload files</button>
                     <script type="text/javascript">
                         var recUrl;
                         var myWidget0 = cloudinary.createUploadWidget({
@@ -68,7 +78,7 @@
                         }, false);
                     </script>
                     <br>
-                    <hr>
+                    <hr class="hrclass">
                     <br>
 
                     {{!-- INPUT FIELD 2a --}}
@@ -88,7 +98,7 @@
                     </div>
 
                     {{!-- UPLOAD BUTTON 2 & SCRIPT--}}
-                    <button id="upload_widget_one" class="cloudinary-button" id="widgetOne">Upload files</button>
+                    <button id="upload_widget_one" class="colored-button" id="widgetOne">Upload files</button>
                     <script type="text/javascript">
                         var recUrl1;
                         var myWidget1 = cloudinary.createUploadWidget({
@@ -106,7 +116,7 @@
                         }, false);
                     </script>
                     <br>
-                    <hr>
+                    <hr class="hrclass">
                     <br>
 
                     {{!-- INPUT FIELD 3a--}}
@@ -126,7 +136,7 @@
                     </div>
 
                     {{!-- UPLOAD BUTTON 3 & SCRIPT--}}
-                    <button id="upload_widget_two" class="cloudinary-button" id="widgetTwo">Upload files</button>
+                    <button id="upload_widget_two" class="colored-button" id="widgetTwo">Upload files</button>
                     <script type="text/javascript">
                         var recUrl2;
                         var myWidget2 = cloudinary.createUploadWidget({
@@ -144,9 +154,9 @@
                         }, false);
                     </script>
                     <br>
-                    <hr>
+                    <hr class="hrclass">
                     {{!-- DONE BUTTON --}}
-                    <button id="recDone" type="submit">Done</button>
+                    <button id="recDone" class="colored-button" type="submit">Done</button>
                 </div>
             </div>
         </div class ="bottom-margin bottom">

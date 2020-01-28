@@ -175,7 +175,6 @@ body {
 }
 
 .cloudinary-button{
-
   font-size: 2px;
 }
 
@@ -457,13 +456,6 @@ body {
   padding-bottom: 10%;
 }
 
-#recDone {
-  background-color: limegreen;
-  color: bisque;
-  border-radius: 10px; 
-  font-size: 18px;
-}
-
 .containerRec {
   text-align: center
 }
@@ -483,11 +475,9 @@ body {
   font-size: large;
   margin: -20px;
   margin-left: 3px;
-  100% {
-    top: -5vh;
-    left: -3vw;
-  }
 }
+
+
 @media screen and (max-width: 800px){
   .curve1{
     width: 40vw;
@@ -508,4 +498,26 @@ body {
   .curve4{
     width: 40vw;
   }
+}
+
+.hrclass {
+  background-color: purple;
+  width: 60%;
+  opacity: 60%;
+  /* height: 12px; */
+  border-top: 1px solid black
+}
+
+#newProductOne {
+  background-color: rgba(31, 30, 30, 0.644);
+}
+
+#btn1 {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgb(5, 159, 197);
+  border-radius: 15px;
+  border: none;
 }
