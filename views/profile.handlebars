@@ -26,10 +26,10 @@
     <div class="row center-align">
         <button id="upload_widget" class="colored-button">Update Profile Picture</button>
         <hr class="hrclass">
-        <button class="colored-button" id ="{{this.UserId}}"> Delete profile</button>
+        <button class="colored-button" id="{{this.UserId}}"> Delete profile</button>
         <div class="row signup-form profile-box">
-            <h4>Logged in as: {{User.firstname}} {{User.lastname}}</h4>
-            <h4>Bio:</h4>
+            <h5>Logged in as: {{User.firstname}} {{User.lastname}}</h5>
+            <h5>Bio:</h4>
             <h5>{{User.bio}}</h5>
         </div>
 
@@ -46,12 +46,15 @@
 
                 {{!-- the href here needs to increment... but with a string #"one"!
                     #"two"! --}}
-                    {{!-- let's just add an array of values that go from one to ten and call it good --}}
+                {{!-- let's just add an array of values that go from one to ten and call it good --}}
                 {{#each Recos}}
-                <div class="carousel-item  white-text" href="#{{caroselNumString}}!">
-                    <button id="{{this.ListId}}"> Delete recommendation </button>
+                <div class="carousel-item white-text" href="#{{caroselNumString}}!">
                     <h2>Category: {{this.category}}</h2>
                     <h2>Description of Product: {{this.body}}</h2>
+                    <hr class="hrclass">
+                    <button class="colored-button" id="{{this.ListId}}"> Delete recommendation </button>
+                    <br>
+                    <br>
                     <a href="#"><img src="{{this.rec_img}}"></a>
                 </div>
                 {{/each}}

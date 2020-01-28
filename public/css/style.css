@@ -521,3 +521,7 @@ body {
   border-radius: 15px;
   border: none;
 }
+
+.select-dropdown {
+  color: white;
+}
