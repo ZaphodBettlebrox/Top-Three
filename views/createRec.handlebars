@@ -59,7 +59,6 @@
                         }, (error, result) => {
                             if (!error && result && result.event === "success") {
                                 console.log('Done! Here is the image info: ', result.info);
-                                alert("image0 uploaded");
                                 recUrl = result.info.url
                             }
                         })
@@ -97,7 +96,6 @@
                         }, (error, result) => {
                             if (!error && result && result.event === "success") {
                                 console.log('Done! Here is the image info: ', result.info);
-                                alert("image1 uploaded");
                                 recUrl1 = result.info.url
                             }
                         })
@@ -135,7 +133,6 @@
                         }, (error, result) => {
                             if (!error && result && result.event === "success") {
                                 console.log('Done! Here is the image info: ', result.info);
-                                alert("image2 uploaded");
                                 recUrl2 = result.info.url
                             }
                         })

@@ -80,7 +80,7 @@ $(document).ready(function () {
         console.log(test)
         if (test === "Create Product") {
             let inputEl = $(`<input type="text" id="newProduct2" placeholder="Enter Product"><button id="btn2">Add Product</button>`)
-            $("#createProductOne").prepend(inputEl)
+            $("#createProductTwo").prepend(inputEl)
         }
 
         $("#btn2").on("click", event => {
@@ -116,7 +116,7 @@ $(document).ready(function () {
         console.log(test)
         if (test === "Create Product") {
             let inputEl = $(`<input type="text" id="newProduct3" placeholder="Enter Product"><button id="btn3">Add Product</button>`)
-            $("#createProduct").prepend(inputEl)
+            $("#createProductThree").prepend(inputEl)
         }
 
         $("#btn3").on("click", event => {

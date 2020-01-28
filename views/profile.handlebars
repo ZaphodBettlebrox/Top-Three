@@ -37,8 +37,8 @@
 
     <div class="row">
 
-        <div class="col s12">
-            <div class="carousel carousel-slider center" id="carouselSlider">
+        <div class="col s12 cp">
+            <div class="carousel carousel-slider center profilecarousel" id="carouselSlider">
                 <div class="carousel-fixed-item center" id="carouselFixed">
                 </div>
 
@@ -47,19 +47,19 @@
                     {{!-- let's just add an array of values that go from one to ten and call it good --}}
                 {{#each Recos}}
                 <div class="carousel-item  white-text" href="#{{caroselNumString}}!">
-                    <button id="{{this.ListId}}"> Delete recommendation </button>
+                    <button class="deleteBtn colored-button" id="{{this.id}}"> Delete recommendation </button>
                     <h2>Category: {{this.category}}</h2>
                     <h2>Description of Product: {{this.body}}</h2>
-                    <a href="#"><img src="{{this.rec_img}}"></a>
+                    <a href="#"><img class="response_img" src="{{this.rec_img}}"></a>
                 </div>
                 {{/each}}
 
             </div>
         </div>
 
-        <div class="col s2">
+        {{!-- <div class="col s2">
 
-        </div>
+        </div> --}}
     </div>
     <br>
     <div class="row test">
