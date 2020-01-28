@@ -134,6 +134,13 @@ body {
   width: 30vw;
 }
 
+.careImg {
+  max-width: 230px;
+  max-height: 95px;
+  width: auto;
+  height: auto;
+}
+
 .arrow {
   position: relative;
   top: 36vh;
