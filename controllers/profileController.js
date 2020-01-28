@@ -164,27 +164,4 @@ router.post("/delete", function (req, res){
 
 
 
-// router.post("/delete", function (req, res){
-//     console.log("gothere to deletePOST");
-//     console.log(req.params);
-//     db.User.destroy(
-//     {
-//         where: {
-//         id: req.params.id
-//         }
-//     }
-//     ).then (function (Userdb){
-//     console.log("rec removed")
-//     res.redirect("/")
-
-//     })
-// });
-//route account to view user's recommendation
-
-
-
-//route account to view liked recs
-
-
-
 module.exports = router
