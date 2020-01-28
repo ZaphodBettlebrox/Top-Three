@@ -24,11 +24,11 @@
         <img src="{{User.profileurl}}" alt="profile picture" class="profile_image">
     </div>
     <div class="row center-align">
-        <button id="upload_widget" class="cloudinary-button">Update Profile Picture</button><button id ="{{this.UserId}}"> Delete profile</button>
+        <button id="upload_widget" class="colored-button">Update Profile Picture</button><button id ="{{this.UserId}}" class="red-button"> Delete profile</button>
         <div class="row signup-form profile-box">
-            <h4>Logged in as: {{User.firstname}} {{User.lastname}}</h4>
-            <h4>Bio:</h4>
-            <h5>{{User.bio}}</h5>
+            <h4 class="h4text-size" >Logged in as: {{User.firstname}} {{User.lastname}}</h4>
+            <h4 class="h4text-size">Bio:</h4>
+            <h5 class="h5text-size">{{User.bio}}</h5>
         </div>
 
     </div>
