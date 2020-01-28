@@ -245,7 +245,7 @@ body {
 .userimgbox{
     margin-top: 5px;
     height: 30vh;
-    width: 42vh;
+    /* width: 42vh; */
 }
 
 
@@ -469,6 +469,22 @@ body {
   padding-right: 10%;
 }
 
+.red-button{
+  margin-left: 5vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgb(235, 116, 126);
+  border-radius: 15px;
+  border: none;
+}
+.red-button:hover {
+  
+  background-color: rgb(180, 9, 9);
+  color: white;
+}
+
 /* label color */
 .input-field label {
   color: rgb(0, 0, 0);
@@ -484,6 +500,12 @@ body {
   }
   .curve4{
     width: 30vw;
+  }
+  .h4text-size{
+    font-size: 4vw;
+  }
+  .h5text-size{
+    font-size: 3vw;
   }
 }
 @media screen and (max-width: 600px) {

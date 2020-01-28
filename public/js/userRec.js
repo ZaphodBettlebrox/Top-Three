@@ -71,6 +71,7 @@ $(document).ready(function () {
 
 
     if (indUser != null) {
+
         // console.log(indUser)
         const userN = (indUser.User.username)
         const profUrl = (indUser.User.profileurl)
@@ -110,7 +111,7 @@ $(document).ready(function () {
        
     </div>`
 
-    $(".userHandle").append(displayUserHandle)
+        $(".userHandle").append(displayUserHandle)
 
 
     }

@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $("#upload_widget").on("click", function () {
         var myWidget = cloudinary.createUploadWidget({
@@ -21,22 +20,25 @@ $(document).ready(function () {
                         location.reload();
                     });
             }
+            
         });
         myWidget.open();
         console.log("hi");
     });
 
- 
-    // $('.carousel').carousel();
 
-    $('.ListID').on("click", function () {
-        $.ajax("/profile/delete/:id"), {
-            type: "delete",
+    $('.carousel').carousel();
+
+    $('.deleteBtn').on("click", function () {
+        console.log(this);
+        console.log(this.id);
+        $.ajax("/profile/delete", {
+            type: "POST",
             data: {
-                id: require.session.user.id
+                id: this.id
             }
-        }
+        })
     })
-    
+
 
 });
