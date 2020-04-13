@@ -1,7 +1,3 @@
-This will be our read me
-
-SESSION_SECRET = "Our front end bros are super great"
-
 # Top 3
 
 A web application that allows users to view or share recommendations to help people discover new products and experiences.
@@ -12,6 +8,10 @@ A web application that allows users to view or share recommendations to help peo
 ## Getting Started
 
 A user can either log in, or create a profile. Once they have they can view their profile and change their profile picture, view recomendations other people have made, or create recomendations themselves.
+
+
+SESSION_SECRET = "Our front end bros are super great"
+
 
 ### Prerequisites
 
