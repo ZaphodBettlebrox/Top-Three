@@ -13,6 +13,14 @@ Guest login- Username: hi Password: hi
 
 SESSION_SECRET = "Our front end bros are super great"
 
+### Profile Page:
+![Capture1](https://user-images.githubusercontent.com/57415537/80533873-25577180-8953-11ea-8720-4308776bf762.PNG)
+
+### Create Recommendation Page
+![Capture2](https://user-images.githubusercontent.com/57415537/80534131-9860e800-8953-11ea-9284-919512b3da96.PNG)
+
+### Explore Page
+![Capture3](https://user-images.githubusercontent.com/57415537/80534216-bd555b00-8953-11ea-95ff-e7db6a22099b.PNG)
 
 ### Prerequisites
 
