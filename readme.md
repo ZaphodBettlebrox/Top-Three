@@ -9,6 +9,7 @@ A web application that allows users to view or share recommendations to help peo
 
 A user can either log in, or create a profile. Once they have they can view their profile and change their profile picture, view recomendations other people have made, or create recomendations themselves.
 
+Guest login- Username: hi Password: hi
 
 SESSION_SECRET = "Our front end bros are super great"
 
